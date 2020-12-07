@@ -6,8 +6,7 @@ all		:	$(NAME)
 $(NAME) :
 		clang++  -Wall -Wextra -Werror  $(SRC) -o $(NAME)
 clean	:
-		rm -f *.o
-fclean	: clean
 		rm -f $(NAME)
+fclean	: clean	
 re		: fclean
 		make all
