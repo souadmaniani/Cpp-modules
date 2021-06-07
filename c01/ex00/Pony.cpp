@@ -4,22 +4,22 @@
 Pony::Pony(int age, float weight, float speed):
  age(age), weight(weight), speed(speed)
 {
-     std::cout << "Constructor called" << std::endl;
+     std::cout << "Constructor called" << "\n";
 }
 
 Pony::~Pony()
 {
-     std::cout << "Destructor called" << std::endl;
+     std::cout << "Destructor called" << "\n";
 }
 
 void Pony::eat(void)
 {
-    std::cout << "I eat Grass, Hay and grains!!" << std::endl;
+    std::cout << "I eat Grass, Hay and grains!!" << "\n";
 }
 
 void Pony::drink(void)
 {
-    std::cout << "I drink Water!!" << std::endl;
+    std::cout << "I drink Water!!" << "\n";
 }
 
 void Pony::run(void) const
@@ -27,7 +27,7 @@ void Pony::run(void) const
     float speed;
 
     speed = getSpeed();
-    std::cout << "My speed is " << speed << std::endl;
+    std::cout << "My speed is " << speed << "\n";
 }
 void Pony::setAge(int age)
 {

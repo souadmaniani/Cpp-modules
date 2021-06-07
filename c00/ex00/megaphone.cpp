@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     int i;
     int j;
     if (argc == 1)
-        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+        std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << '\n';
     else
     {
         i = 0;
@@ -42,13 +42,12 @@ int main(int argc, char *argv[])
             rm_space(&argv[i]);
             j = -1;
             while (argv[i][++j] != '\0')
-                if (argv[i][j] >= 97 && argv[i][j] <= 122)
-                    argv[i][j] -= 32;
+                toupper(argv[i][j]);
         }
         i = 0;
         while(++i != argc - 1)
              std::cout << argv[i] << " " ;
-        std::cout << argv[i] << std::endl;
+        std::cout << argv[i] << "\n";
     }
     return (0);  
 }

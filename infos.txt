@@ -1,0 +1,7 @@
+2 to 2.5 per day
+INITIALISATION LIST: 
+    Sample::Sample(char p1, int p2) : a1(p1), a2(p2){
+        std::cout << this->a1 << "\n";
+    }
+
+CONVENTION: FOR THE PRIVATE  USE _variableName

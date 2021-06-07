@@ -7,12 +7,12 @@
 
 ZombieEvent::ZombieEvent()
 {
-    std::cout << "Constructor called" << std::endl;
+    std::cout << "Constructor called" << "\n";
 }
 
 ZombieEvent::~ZombieEvent()
 {
-    std::cout << "Destructor called" << std::endl;
+    std::cout << "Destructor called" << "\n";
 }
 
 void ZombieEvent::setZombieType(Zombie& instance, std::string type)
@@ -32,5 +32,5 @@ void ZombieEvent::randomChump(void)
 {
     Zombie  instance;
     instance.name = "zozo";
-    std::cout << "I am " << instance.name << std::endl;
+    std::cout << "I am " << instance.name << "\n";
 }

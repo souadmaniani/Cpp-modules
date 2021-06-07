@@ -19,10 +19,10 @@ void ponyOnTheStack(void)
 
 int main(void)
 {
-    std::cout << "Apply Function On the heap" << std::endl;
+    std::cout << "Apply Function On the heap" << "\n";
     ponyOnTheHeap();
-    std::cout << "Apply Function On the stack" << std::endl;
+    std::cout << "Apply Function On the stack" << "\n";
     ponyOnTheStack();
-    std::cout << "The end" << std::endl;
+    std::cout << "The end" << "\n";
     return (0);
 }

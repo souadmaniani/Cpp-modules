@@ -2,17 +2,17 @@
 #include "Sample.class.hpp"
 
 Sample::Sample(){
-    std::cout <<"Constructor called"<<std::endl;
+    std::cout <<"Constructor called"<<"\n";
     Sample::cont+=1;
 
     this->foo = 1337;
-    std::cout << this->foo <<std::endl;
-    std::cout << this->a1 <<std::endl;
+    std::cout << this->foo <<"\n";
+    std::cout << this->a1 <<"\n";
     this->bar();
     return;
 }
 Sample::~Sample(void){
-    std::cout <<"Destructor called"<<std::endl;
+    std::cout <<"Destructor called"<<"\n";
     Sample::cont-=1;
     return;
 }
@@ -24,7 +24,7 @@ int Sample::getCont(void)
 int Sample::cont = 0;
 void Sample::bar(void)
 {
-    std::cout << "Member function called" << std::endl;
+    std::cout << "Member function called" << "\n";
     return;
 }
 int Sample::compare(Sample *other)
