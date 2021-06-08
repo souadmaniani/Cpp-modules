@@ -5,3 +5,20 @@ INITIALISATION LIST:
     }
 
 CONVENTION: FOR THE PRIVATE  USE _variableName
+/**************************************************************************************/
+    HEAP VS STACK
+==> It allocates or deallocates the memory automatically as soon as the
+corresponding method completes its execution.
+==> Stack memory allocation is considered safer as compared to heap memory
+allocation because the data stored can only be access by owner thread.
+==> Memory allocation and deallocation is faster as compared to Heap-memory allocation.
+==> Stack-memory has less storage space as compared to Heap-memory.
+/**************************************************************************************/
+
+/**************************************************************************************/
+    POINTER VS REFERENCE C++
+==> A pointer in C++ is a variable that holds the memory address of another variable.
+==> A reference is an alias for an already existing variable. Once a reference is
+initialized to a variable, it cannot be changed to refer to another variable. Hence,
+a reference is similar to a const pointer.
+/**************************************************************************************/

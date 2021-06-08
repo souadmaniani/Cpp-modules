@@ -15,13 +15,11 @@ std::string Contact::_fields[nb_fields] = {
 };
 
 Contact::Contact(void)
-{
-    // std::cout <<"Constructor called for contact"<< "\n";   
+{  
 }
 
 Contact::~Contact(void)
 {
-    // std::cout <<"Destructor called for contact"<<"\n";
 }
 
 std::string Contact::getInfoContact(int i)
@@ -41,6 +39,7 @@ void Contact::displayContact(void)
     i = -1;
     while(++i < nb_fields)
     {
+        std::cout << _fields[i] << ": ";
         std::cout << getInfoContact(i) << "\n";
     }
 }

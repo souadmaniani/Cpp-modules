@@ -36,6 +36,8 @@ int main(void)
 				c.createContact();
 				pb.addContact(pb.getCount(), c);
 			}
+			else
+				std::cout << "\033[1;31myour phonebook storage is full!\033[0m" << "\n";
 		}
 		else if(command.compare("SEARCH") == 0)
 		{

@@ -3,12 +3,10 @@
 int PhoneBook::_count = 0;
 PhoneBook::PhoneBook(void)
 {
-    // std::cout <<"Constructor called for phoneBook"<< "\n";
 }
 
 PhoneBook::~PhoneBook(void)
 {
-    // std::cout <<"Destructor called for phoneBook"<< "\n";
 }
 
 int PhoneBook::getCount(void)
