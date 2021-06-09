@@ -1,5 +1,5 @@
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 #include <iomanip>
 # include "contact.hpp"
 # define nb_contact  8

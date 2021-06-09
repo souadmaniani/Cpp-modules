@@ -1,5 +1,5 @@
-#ifndef PONY_H
-# define PONY_H
+#ifndef PONY_HPP
+# define PONY_HPP
 
 class Pony
 {

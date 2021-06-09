@@ -22,3 +22,10 @@ allocation because the data stored can only be access by owner thread.
 initialized to a variable, it cannot be changed to refer to another variable. Hence,
 a reference is similar to a const pointer.
 /**************************************************************************************/
+
+/**************************************************************************************/
+    DEFAULT constructor
+Whenever we define one or more non-default constructors( with parameters ) for a class,
+a default constructor( without parameters ) should also be explicitly defined as the
+compiler will not provide a default constructor in this case
+/**************************************************************************************/

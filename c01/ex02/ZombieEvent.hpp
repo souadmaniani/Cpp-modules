@@ -4,12 +4,12 @@
 
 class ZombieEvent
 {
-    public:
-        ZombieEvent();
-        ~ZombieEvent();
-        void setZombieType(Zombie& instance, std::string type);
-        Zombie* newZombie(std::string name);
-        void randomChump(void);
+	public:
+		ZombieEvent();
+		~ZombieEvent();
+		void setZombieType(Zombie& instance, std::string type);
+		Zombie* newZombie(std::string name);
+		void randomChump(ZombieEvent& eventInstance);
 };
 
 #endif

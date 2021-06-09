@@ -2,13 +2,14 @@
 
 int main(void)
 {
-    // Zombie zombie("parasite", "White Walker");
-    // zombie.announce();
-    // ZombieEvent inst;
-    // Zombie *instance;
-    // Zombie referc;
-    // instance = inst.newZombie("zizo");
-    // inst.setZombieType(referc, "radiation");
-    // instance->announce();
-    // delete instance;
+    Zombie zombie1("man", "ozakkare");
+    zombie1.announce();
+    Zombie zombie2("women", "smaniani");
+    zombie2.announce();
+    ZombieEvent zombieEvent;
+    Zombie *instance;
+    instance = zombieEvent.newZombie("ael-fadi");
+    instance->announce();
+    delete instance;
+    zombieEvent.randomChump(zombieEvent);
 }
