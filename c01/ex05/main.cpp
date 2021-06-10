@@ -1,11 +1,8 @@
-#include "Brain.hpp"
+#include "Human.hpp"
 
 int  main()
 {
-    std::string my_address;
-
-    Brain instance;
-    my_address = instance.identify();
-    std::cout << my_address << "\n";
-    
+    Human bob;
+    std::cout << bob.identify() << std::endl;
+    std::cout << bob.getBrain().identify() << std::endl;
 }

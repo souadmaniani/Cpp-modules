@@ -3,10 +3,10 @@
 class Human 
 {
 	private:
-		const Brain instance;
+		const Brain humanBrain;
 	public:
 		Human();
 		~Human();
 		std::string identify(void);
-		Brain getBrain(void) const;
+		const Brain& getBrain(void) const;
 };
