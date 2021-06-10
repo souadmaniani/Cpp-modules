@@ -14,6 +14,10 @@ std::string HumanA::getName(void)
 {
     return (this->name);
 }
+void HumanA::setName(std::string name)
+{
+    this->name = name;
+}
 
 Weapon &HumanA::getWeapon(void) const
 {
