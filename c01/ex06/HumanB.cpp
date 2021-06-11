@@ -20,7 +20,7 @@ void HumanB::setName(std::string &name)
     this->name = &name;
 }
 
-Weapon &HumanB::getWeapon(void)
+Weapon &HumanB::getWeapon(void) const
 {
     return (*this->weapon);
 }

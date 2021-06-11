@@ -27,8 +27,6 @@ void ZombieEvent::setZombieType(Zombie& instance, std::string type)
 Zombie* ZombieEvent::newZombie(std::string name)
 {
     Zombie  *instance = new Zombie("Walking Dead", name);
-    Zombie& reference = *instance;
-    setZombieType(reference, "genius");
     return (instance);
 }
 
@@ -36,7 +34,7 @@ void ZombieEvent::randomChump(ZombieEvent &eventInstance)
 {
     int random;
     Zombie *instance;
-
+    
     srand(time(NULL));
     random = rand() % 6;
     instance = eventInstance.newZombie(zombies_names[random]);

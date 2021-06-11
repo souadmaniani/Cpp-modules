@@ -9,6 +9,7 @@ void ponyOnTheHeap(void)
     instance->run();
     delete instance;
 }
+
 void ponyOnTheStack(void)
 {
     Pony instance(1, 100, 60);

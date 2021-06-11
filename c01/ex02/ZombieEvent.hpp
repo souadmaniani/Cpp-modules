@@ -9,7 +9,7 @@ class ZombieEvent
 		~ZombieEvent();
 		void setZombieType(Zombie& instance, std::string type);
 		Zombie* newZombie(std::string name);
-		void randomChump(ZombieEvent& eventInstance);
+		void randomChump(ZombieEvent &eventInstance);
 };
 
 #endif

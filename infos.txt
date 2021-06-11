@@ -29,3 +29,13 @@ Whenever we define one or more non-default constructors( with parameters ) for a
 a default constructor( without parameters ) should also be explicitly defined as the
 compiler will not provide a default constructor in this case
 /**************************************************************************************/
+
+/**************************************************************************************/
+ofstream: Stream class to write on files
+ifstream: Stream class to read from files
+/**************************************************************************************/
+
+/**************************************************************************************/
+
+/**************************************************************************************/
+

@@ -4,12 +4,12 @@
 Pony::Pony(int age, float weight, float speed):
  age(age), weight(weight), speed(speed)
 {
-     std::cout << "Constructor called" << "\n";
+     std::cout << "\033[1;31mConstructor called\033[0m" << "\n";
 }
 
 Pony::~Pony()
 {
-     std::cout << "Destructor called" << "\n";
+     std::cout << "\033[1;31mDestructor called\033[0m" << "\n";
 }
 
 void Pony::eat(void)
