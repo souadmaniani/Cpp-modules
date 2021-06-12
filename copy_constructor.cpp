@@ -25,3 +25,5 @@ int main() {
 
   first.data[0] = 10;  // (2)
 }
+
+// https://en.wikipedia.org/wiki/Copy_constructor_(C%2B%2B)

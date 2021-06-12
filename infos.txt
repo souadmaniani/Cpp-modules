@@ -36,6 +36,9 @@ ifstream: Stream class to read from files
 /**************************************************************************************/
 
 /**************************************************************************************/
+COPY_CONSTRUCTOR
+- a new instance is created
+- with the = assignment operator there is an update of the current instance
 
 /**************************************************************************************/
 
