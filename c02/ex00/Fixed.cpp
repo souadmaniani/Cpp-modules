@@ -34,23 +34,3 @@ void Fixed::setRawBits( int const raw )
 {
 	this->_FixedPoint = raw;
 }
-
-Fixed::Fixed(int const a) : _FixedPoint(a)
-{
-	std::cout << "Int constructor called" << std::endl;
-	return;
-}
-
-// Fixed::Fixed( const float a ): _FixedPoint( a )
-// {
-// 	std::cout << "Float constructor called" << std::endl;
-// }
-// float Fixed::toFloat( void ) const
-// {
-// 	return ;
-// }
-
-// int Fixed::toInt( void ) const
-// {
-// 	return;
-// }
