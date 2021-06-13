@@ -6,15 +6,15 @@
 class FragTrap
 {
 private:
-	int Hit_points = 100;
-	int Max_hit_points = 100;
-	int Energy_points = 100;
-	int Max_energy_points = 100;
-	int Level = 1;
+	int Hit_points;
+	int Max_hit_points;
+	int Energy_points;
+	int Max_energy_points;
+	int Level;
 	std::string Name;
-	int Melee_attack_damage = 30; // when ur close enough
-	int Ranged_attack_damage = 20;
-	int Armor_damage_reduction = 5;
+	int Melee_attack_damage;
+	int Ranged_attack_damage;
+	int Armor_damage_reduction;
 public:
 	FragTrap(void);
 	~FragTrap(void);
