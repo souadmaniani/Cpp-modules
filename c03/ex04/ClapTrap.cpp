@@ -32,14 +32,14 @@ ClapTrap & ClapTrap::operator=(ClapTrap const & rhs)
 
 void ClapTrap::rangedAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP, " << Name << ", attacks ";
+	std::cout << Name << ", attacks ";
 	std::cout << target << " at range, causing " << Ranged_attack_damage;
 	std::cout << " points of damage!\n" ;
 }
 
 void ClapTrap::meleeAttack(std::string const & target)
 {
-	std::cout << "FR4G-TP, " << Name << ", attacks ";
+	std::cout << Name << ", attacks ";
 	std::cout << target << " at range, causing " << Melee_attack_damage;
 	std::cout << " points of damage!\n" ;
 }

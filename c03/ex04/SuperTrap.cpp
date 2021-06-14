@@ -44,7 +44,16 @@ SuperTrap & SuperTrap::operator=(SuperTrap const & rhs)
 	return *this;
 }
 
+void SuperTrap::rangedAttack(std::string const & target)
+{
+	FragTrap::rangedAttack(target);
+}
+
 void SuperTrap::meleeAttack(std::string const & target)
 {
-	NinjaTrap::meleeAttack(target);
+	// NinjaTrap::meleeAttack(target);
+	std::cout << "SuperTrap, ";
+	std::cout << Name << ", attacks ";
+	std::cout << target << " at range, causing " << Melee_attack_damage;
+	std::cout << " points of damage!\n" ;
 }

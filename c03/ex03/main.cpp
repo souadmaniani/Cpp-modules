@@ -12,5 +12,6 @@ int main()
     instance3.ninjaShoebox(instance1);
     instance3.ninjaShoebox(instance2);
     instance3.ninjaShoebox(instance3);
+    instance3.meleeAttack(target);
     return (0);
 }
