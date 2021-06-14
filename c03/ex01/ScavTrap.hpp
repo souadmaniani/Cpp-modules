@@ -3,25 +3,24 @@
 #include <iostream>
 #include <string>
 
-class ScavTrap
+class ScavTrap : public ClapTrap
 {
 private:
-	int Hit_points = 100;
-	int Max_hit_points = 100;
-	int Energy_points = 100;
-	int Max_energy_points = 100;
-	int Level = 1;
+	int Hit_points;
+	int Max_hit_points;
+	int Energy_points;
+	int Max_energy_points;
+	int Level;
 	std::string Name;
-	int Melee_attack_damage = 20; // when ur close enough
-	int Ranged_attack_damage = 15;
-	int Armor_damage_reduction = 3;
+	int Melee_attack_damage;
+	int Ranged_attack_damage;
+	int Armor_damage_reduction;
 public:
 	ScavTrap(void);
 	~ScavTrap(void);
 	ScavTrap(std::string name);
 	ScavTrap (ScavTrap const & src);
 	ScavTrap & operator=(ScavTrap const & rhs);
-	std::string & getName( void ) const;
 	void rangedAttack(std::string const & target);
 	void meleeAttack(std::string const & target);
 	void takeDamage(unsigned int amount);
@@ -32,5 +31,3 @@ public:
 std::ostream & operator<<( std::ostream & o, ScavTrap const & rhs);
 
 #endif
-
-// killing an enemy restore Health, but  costs shields (armor)

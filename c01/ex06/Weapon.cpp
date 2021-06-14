@@ -11,7 +11,7 @@ Weapon::Weapon(std::string type) : type(type)
 
 Weapon::~Weapon()
 {
-    // std::cout << " Destructor for weapon" << "\n";
+    // std::cout << "Deconstructor for weapon" << "\n";
 }
 
 const std::string& Weapon::getType(void)

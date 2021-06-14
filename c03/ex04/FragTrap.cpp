@@ -2,18 +2,18 @@
 
 FragTrap::FragTrap()
 {
-	std::cout << "\033[1;31mDefault constructor called for FragTrap\033[0m" << std::endl;
+	std::cout << "\033[0;35mDefault constructor called for FragTrap\033[0m" << std::endl;
 	return;
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "\033[1;31mDestructor called for FragTrap\033[0m" << std::endl;
+	std::cout << "\033[0;35mDestructor called for FragTrap\033[0m" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name)
 {
-	std::cout << "\033[1;31mConstructor called for FragTrap\033[0m" << std::endl;
+	std::cout << "\033[0;35mConstructor called for FragTrap\033[0m" << std::endl;
 	Name = name;
 	Hit_points = 100;
 	Max_hit_points = 100;

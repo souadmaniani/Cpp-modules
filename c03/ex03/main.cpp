@@ -1,5 +1,6 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
 
 int main()
 {
@@ -7,10 +8,9 @@ int main()
 
     FragTrap instance1("Smaniani");
     ScavTrap instance2("Ozakkare");
-    instance1.vaulthunter_dot_exe(target);
-    instance2.challengeNewcomer(target);
-    instance1.meleeAttack(target);
-    instance2.meleeAttack(target);
-    
+    NinjaTrap instance3("ael_fadi");
+    instance3.ninjaShoebox(instance1);
+    instance3.ninjaShoebox(instance2);
+    instance3.ninjaShoebox(instance3);
     return (0);
 }

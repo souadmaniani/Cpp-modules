@@ -19,25 +19,27 @@ ZombieEvent::~ZombieEvent()
     std::cout << "\033[1;31mDestructor called for ZombieEvent\033[0m" << "\n";
 }
 
-void ZombieEvent::setZombieType(Zombie& instance, std::string type)
+void ZombieEvent::setZombieType(Zombie& instance)
 {
-    instance.setType(type);
+    instance.setType("Walking Dead");
 }
 
 Zombie* ZombieEvent::newZombie(std::string name)
 {
-    Zombie  *instance = new Zombie("Walking Dead", name);
+    Zombie  *instance = new Zombie();
+    setZombieType(*instance);
+    instance->setName(name);
     return (instance);
 }
 
-void ZombieEvent::randomChump(ZombieEvent &eventInstance)
+void ZombieEvent::randomChump(void)
 {
     int random;
     Zombie *instance;
     
     srand(time(NULL));
     random = rand() % 6;
-    instance = eventInstance.newZombie(zombies_names[random]);
+    instance = this->newZombie(zombies_names[random]);
     instance->announce();
     delete instance;
 }

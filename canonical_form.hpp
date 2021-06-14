@@ -6,12 +6,12 @@
 class Sample {
 
 public:
-	Sample( void );
+	Sample( void ); //canonical
 	Sample( int const foo);
-	Sample( Sample const & src);
-	~Sample( void );
+	Sample( Sample const & src); //canonical
+	~Sample( void );//canonical
 
-	Sample & operator=( Sample const & rhs );
+	Sample & operator=( Sample const & rhs ); //canonical
 
 	int getFoo( void ) const;
 private:

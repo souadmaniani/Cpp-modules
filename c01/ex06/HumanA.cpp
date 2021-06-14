@@ -7,7 +7,7 @@ HumanA::HumanA(std::string name, Weapon &weapon) : weapon(weapon)
 }
 HumanA::~HumanA()
 {
-    // std::cout << " Destructor for HumanA" << "\n";
+    // std::cout << "Deconstructor for HumanA" << "\n";
 }
 
 std::string HumanA::getName(void)

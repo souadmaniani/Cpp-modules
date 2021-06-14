@@ -8,20 +8,21 @@ std::string challenges[5] = {
 	"Shoot chains to release midgets from shields."
 };
 
-ScavTrap::  ScavTrap()
+ScavTrap::ScavTrap()
 {
-    std::cout << "\033[1;31mDefault constructor called for ScavTrap\033[0m" << std::endl;
+    std::cout << "\033[0;35mDefault constructor called for ScavTrap\033[0m" << std::endl;
 	return;
 }
 
 ScavTrap::~ ScavTrap()
 {
-    std::cout << "\033[1;31mDestructor called for ScavTrap\033[0m" << std::endl;
+    std::cout << "\033[0;35mDestructor called for ScavTrap\033[0m" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name): Name(name)
+ScavTrap::ScavTrap(std::string name)
 {
-    std::cout << "\033[1;31mConstructor called for ScavTrap\033[0m" << std::endl;
+    std::cout << "\033[0;35mConstructor called for ScavTrap\033[0m" << std::endl;
+	Name = name;
     Hit_points = 100;
 	Max_hit_points = 100;
 	Energy_points = 100;
@@ -53,36 +54,14 @@ ScavTrap & ScavTrap::operator=(ScavTrap const & rhs)
 
 void    ScavTrap::rangedAttack(std::string const & target)
 {
-	std::cout << "SCAV-TP, " << Name << ", attacks ";
-	std::cout << target << " at range, causing " << Ranged_attack_damage;
-	std::cout << " points of damage!\n" ;
+	std::cout << "SCAV-TP, ";
+	ClapTrap::rangedAttack(target);
 }
 
-void    ScavTrap::meleeAttack(std::string const & target)
+void     ScavTrap::meleeAttack(std::string const & target)
 {
-	std::cout << "SCAV-TP, " << Name << ", attacks ";
-	std::cout << target << " at range, causing " << Melee_attack_damage;
-	std::cout << " points of damage!\n" ;
-}
-
-void    ScavTrap::takeDamage(unsigned int amount)
-{
-	if (Hit_points + Armor_damage_reduction < (int)amount)
-		Hit_points = 0;
-	else if (Hit_points + Armor_damage_reduction - (int)amount > Max_hit_points)
-		Hit_points = Max_hit_points;
-	else
-		Hit_points = Hit_points + Armor_damage_reduction - (int)amount; 
-	std::cout << "Take damage " << "HP: " << Hit_points << "\n";
-}
-
-void    ScavTrap::beRepaired(unsigned int amount)
-{
-	if ((int)amount + Hit_points > Max_hit_points)
-		Hit_points = Max_hit_points;
-	else
-		Hit_points += (int)amount;
-	std::cout << "be repaired " << "HP: " << Hit_points << "\n";
+	std::cout << "SCAV-TP, ";
+	ClapTrap::meleeAttack(target);
 }
 
 void ScavTrap::challengeNewcomer(std::string const & target)
@@ -92,3 +71,4 @@ void ScavTrap::challengeNewcomer(std::string const & target)
 	std::cout << target << ", its challenge is: ";
 	std::cout << challenges[rand() % 5] << "\n";
 }
+

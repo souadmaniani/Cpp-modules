@@ -1,6 +1,7 @@
 #include "Zombie.hpp"
 Zombie::Zombie()
 {
+    std::cout << "\033[1;31mDefault Constructor called for Zombie\033[0m" << "\n";
 }
 
 Zombie::Zombie(std::string type, std::string name): type(type), name(name)
