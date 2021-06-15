@@ -41,4 +41,13 @@ COPY_CONSTRUCTOR
 - with the = assignment operator there is an update of the current instance
 
 /**************************************************************************************/
+THE FOOR POLYMORPHISM IN C++
+Note:When the function is made virtual, C++ determines which function is to be invoked at
+    the runtime based on the type of the object pointed by the base class pointer.
 
+1.Subtype Polymorphism (Runtime Polymorphism).
+2.Ad-hoc Polymorphism (Overloading)
+/**************************************************************************************/
+ABSTRACT CLASSES AND INTERFACES
+- virtual function = 0 ==> it can't be implemented (pure method) so we can't instanciat the class
+ (abstract class)
