@@ -3,15 +3,15 @@
 
 NinjaTrap::NinjaTrap(void)
 {
-    std::cout << "\033[0;35mDefault constructor called for NinjaTrap\033[0m" << std::endl;
+    std::cout << "\033[0;33mNinjaTrap: Let's get this party started!\033[0m" << std::endl;
 }
 NinjaTrap::~NinjaTrap(void)
 {
-    std::cout << "\033[0;35mDestructor called for NinjaTrap\033[0m" << std::endl;
+    std::cout << "\033[0;33mNinjaTrap: I'm too pretty to die!\033[0m" << std::endl;
 }
 NinjaTrap::NinjaTrap(std::string name)
 {
-    std::cout << "\033[0;35mConstructor called for NinjaTrap\033[0m" << std::endl;
+    std::cout << "\033[0;33mNinjaTrap: Let's get this party started!\033[0m" << std::endl;
     Name = name;
     Hit_points = 60;
     Max_hit_points = 60;
@@ -39,26 +39,33 @@ NinjaTrap & NinjaTrap::operator=(NinjaTrap const & rhs)
 	this->Armor_damage_reduction = rhs.Armor_damage_reduction;
     return *this;
 }
-void NinjaTrap::rangedAttack(std::string const & target)
+
+void    NinjaTrap::rangedAttack(std::string const & target)
 {
-    std::cout << "NINJA-TP, ";
-	ClapTrap::rangedAttack(target);
+	std::cout << "NINJA-TP, " << Name << ", attacks ";
+	std::cout << target << ", causing " << Ranged_attack_damage;
+	std::cout << " points of damage!\n" ;
 }
-void NinjaTrap::meleeAttack(std::string const & target)
+
+void    NinjaTrap::meleeAttack(std::string const & target)
 {
-    std::cout << "NINJA-TP, ";
-	ClapTrap::meleeAttack(target);
+	std::cout << "NINJA-TP, " << Name << ", attacks ";
+	std::cout << target << " at range, causing " << Melee_attack_damage;
+	std::cout << " points of damage!\n" ;
 }
+
 void NinjaTrap::ninjaShoebox(FragTrap & rhs)
 {   
     (void)rhs;
     std::cout << "ninjaShoebox called for FragTrap\n";
 }
+
 void NinjaTrap::ninjaShoebox(ScavTrap & rhs)
 {
     (void)rhs;
     std::cout << "ninjaShoebox called for ScavTrap\n";
 }
+
 void NinjaTrap::ninjaShoebox(NinjaTrap & rhs)
 {
     (void)rhs;

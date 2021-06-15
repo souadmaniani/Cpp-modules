@@ -2,13 +2,13 @@
 
 ClapTrap::ClapTrap()
 {
-    std::cout << "\033[0;35mDefault constructor called for ClapTrap\033[0m" << std::endl;
+    std::cout << "\033[0;33mClapTrap: Let's get this party started!\033[0m" << std::endl;
 	return;
 }
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "\033[0;35mDestructor called for ClapTrap\033[0m" << std::endl;
+    std::cout << "\033[0;33mClapTrap: I'm too pretty to die!\033[0m" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const & src)
@@ -30,20 +30,6 @@ ClapTrap & ClapTrap::operator=(ClapTrap const & rhs)
 	return *this;
 }
 
-void ClapTrap::rangedAttack(std::string const & target)
-{
-	std::cout << Name << ", attacks ";
-	std::cout << target << " at range, causing " << Ranged_attack_damage;
-	std::cout << " points of damage!\n" ;
-}
-
-void ClapTrap::meleeAttack(std::string const & target)
-{
-	std::cout << Name << ", attacks ";
-	std::cout << target << " at range, causing " << Melee_attack_damage;
-	std::cout << " points of damage!\n" ;
-}
-
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	if (Hit_points + Armor_damage_reduction < (int)amount)
@@ -51,8 +37,9 @@ void ClapTrap::takeDamage(unsigned int amount)
 	else if (Hit_points + Armor_damage_reduction - (int)amount > Max_hit_points)
 		Hit_points = Max_hit_points;
 	else
-		Hit_points = Hit_points + Armor_damage_reduction - (int)amount; 
-	std::cout << "Take damage " << "HP: " << Hit_points << "\n";
+		Hit_points = Hit_points + Armor_damage_reduction - (int)amount;
+	std::cout << "Oh my God, I'm leaking! There's oil everywhere!";
+	std::cout << "\033[0;31m HP: " << Hit_points << "\033[m\n";
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -61,5 +48,5 @@ void ClapTrap::beRepaired(unsigned int amount)
 		Hit_points = Max_hit_points;
 	else
 		Hit_points += (int)amount;
-	std::cout << "be repaired " << "HP: " << Hit_points << "\n";	
+	std::cout << "Good as new, I think. Am I leaking? " << "\033[0;31m HP: " << Hit_points << "\033[m\n";	
 }

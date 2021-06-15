@@ -21,7 +21,6 @@ public:
 	FragTrap(std::string name);
 	FragTrap (FragTrap const & src);
 	FragTrap & operator=(FragTrap const & rhs);
-	// std::string & getName( void ) const;
 	void rangedAttack(std::string const & target);
 	void meleeAttack(std::string const & target);
 	void takeDamage(unsigned int amount);
@@ -32,5 +31,3 @@ public:
 std::ostream & operator<<( std::ostream & o, FragTrap const & rhs);
 
 #endif
-
-// killing an enemy restore Health, but  costs shields (armor)

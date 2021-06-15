@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-class ScavTrap : public ClapTrap
+class ScavTrap
 {
 private:
 	int Hit_points;

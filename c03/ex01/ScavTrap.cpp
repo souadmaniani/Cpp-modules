@@ -10,18 +10,18 @@ std::string challenges[5] = {
 
 ScavTrap::  ScavTrap()
 {
-    std::cout << "\033[1;31mDefault constructor called for ScavTrap\033[0m" << std::endl;
+    std::cout << "\033[0;33mScavTrap: Let's get this party started!\033[0m" << std::endl;
 	return;
 }
 
 ScavTrap::~ ScavTrap()
 {
-    std::cout << "\033[1;31mDestructor called for ScavTrap\033[0m" << std::endl;
+	std::cout << "\033[0;33mScavTrap: I'm too pretty to die!\033[0m" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name): Name(name)
 {
-    std::cout << "\033[1;31mConstructor called for ScavTrap\033[0m" << std::endl;
+    std::cout << "\033[0;33mScavTrap: Let's get this party started!\033[0m" << std::endl;
     Hit_points = 100;
 	Max_hit_points = 100;
 	Energy_points = 100;
@@ -61,7 +61,7 @@ void    ScavTrap::rangedAttack(std::string const & target)
 void    ScavTrap::meleeAttack(std::string const & target)
 {
 	std::cout << "SCAV-TP, " << Name << ", attacks ";
-	std::cout << target << " at range, causing " << Melee_attack_damage;
+	std::cout << target << " , causing " << Melee_attack_damage;
 	std::cout << " points of damage!\n" ;
 }
 
@@ -73,7 +73,8 @@ void    ScavTrap::takeDamage(unsigned int amount)
 		Hit_points = Max_hit_points;
 	else
 		Hit_points = Hit_points + Armor_damage_reduction - (int)amount; 
-	std::cout << "Take damage " << "HP: " << Hit_points << "\n";
+	std::cout << "Oh my God, I'm leaking! There's oil everywhere!";
+	std::cout << "\033[0;31m HP: " << Hit_points << "\033[m\n";
 }
 
 void    ScavTrap::beRepaired(unsigned int amount)
@@ -82,12 +83,13 @@ void    ScavTrap::beRepaired(unsigned int amount)
 		Hit_points = Max_hit_points;
 	else
 		Hit_points += (int)amount;
-	std::cout << "be repaired " << "HP: " << Hit_points << "\n";
+	std::cout << "Good as new, I think. Am I leaking? " << "\033[0;31m HP: " << Hit_points << "\033[m\n";	
 }
 
 void ScavTrap::challengeNewcomer(std::string const & target)
 {
 	srand(time(0));
+	std::cout << "\033[0;34mYou wanna fight with me?! Put 'em up!.. Put 'em up?\033[m\n";
 	std::cout << "SCAV-TP, " << Name << ", challenges ";
 	std::cout << target << ", its challenge is: ";
 	std::cout << challenges[rand() % 5] << "\n";

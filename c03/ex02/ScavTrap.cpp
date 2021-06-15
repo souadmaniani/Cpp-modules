@@ -8,20 +8,20 @@ std::string challenges[5] = {
 	"Shoot chains to release midgets from shields."
 };
 
-ScavTrap::  ScavTrap()
+ScavTrap::ScavTrap()
 {
-    std::cout << "\033[1;31mDefault constructor called for ScavTrap\033[0m" << std::endl;
+   	std::cout << "\033[0;33mScavTrap: Let's get this party started!\033[0m" << std::endl;
 	return;
 }
 
 ScavTrap::~ ScavTrap()
 {
-    std::cout << "\033[1;31mDestructor called for ScavTrap\033[0m" << std::endl;
+    std::cout << "\033[0;33mScavTrap: I'm too pretty to die!\033[0m" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name)
 {
-    std::cout << "\033[1;31mConstructor called for ScavTrap\033[0m" << std::endl;
+    std::cout << "\033[0;33mScavTrap: Let's get this party started!\033[0m" << std::endl;
 	Name = name;
     Hit_points = 100;
 	Max_hit_points = 100;
@@ -54,14 +54,16 @@ ScavTrap & ScavTrap::operator=(ScavTrap const & rhs)
 
 void    ScavTrap::rangedAttack(std::string const & target)
 {
-	std::cout << "SCAV-TP, ";
-	ClapTrap::rangedAttack(target);
+	std::cout << "SCAV-TP, " << Name << ", attacks ";
+	std::cout << target << " at range, causing " << Ranged_attack_damage;
+	std::cout << " points of damage!\n" ;
 }
 
-void     ScavTrap::meleeAttack(std::string const & target)
+void    ScavTrap::meleeAttack(std::string const & target)
 {
-	std::cout << "SCAV-TP, ";
-	ClapTrap::meleeAttack(target);
+	std::cout << "SCAV-TP, " << Name << ", attacks ";
+	std::cout << target << ", causing " << Melee_attack_damage;
+	std::cout << " points of damage!\n" ;
 }
 
 void ScavTrap::challengeNewcomer(std::string const & target)
@@ -71,3 +73,4 @@ void ScavTrap::challengeNewcomer(std::string const & target)
 	std::cout << target << ", its challenge is: ";
 	std::cout << challenges[rand() % 5] << "\n";
 }
+

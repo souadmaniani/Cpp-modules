@@ -18,6 +18,4 @@ public:
     void ninjaShoebox(NinjaTrap & rhs);
 };
 
-std::ostream & operator<<( std::ostream & o, NinjaTrap const & rhs);
-
 #endif

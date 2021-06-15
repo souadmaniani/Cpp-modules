@@ -11,6 +11,5 @@ int main()
     instance2.challengeNewcomer(target);
     instance1.meleeAttack(target);
     instance2.meleeAttack(target);
-    
     return (0);
 }

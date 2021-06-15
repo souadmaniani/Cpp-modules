@@ -5,16 +5,6 @@
 
 class SuperTrap : public FragTrap, public NinjaTrap
 {
-private:
-	int Hit_points;
-	int Max_hit_points;
-	int Energy_points;
-	int Max_energy_points;
-	int Level;
-	std::string Name;
-	int Melee_attack_damage;
-	int Ranged_attack_damage;
-	int Armor_damage_reduction;
 public:
 	SuperTrap(void);
 	~SuperTrap(void);
@@ -24,6 +14,10 @@ public:
 
 	void rangedAttack(std::string const & target);
 	void meleeAttack(std::string const & target);
+	void vaulthunter_dot_exe(std::string const & target);
+	void ninjaShoebox(FragTrap & rhs);
+    void ninjaShoebox(ScavTrap & rhs);
+    void ninjaShoebox(NinjaTrap & rhs);
 };
 
 #endif

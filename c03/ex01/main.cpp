@@ -14,7 +14,7 @@ int main()
     instance1.takeDamage(20);
     instance2.takeDamage(20);
     instance1.beRepaired(5);
-    instance2.beRepaired(100);
+    instance2.beRepaired(5);
     
     instance1.vaulthunter_dot_exe(target);
     instance2.challengeNewcomer(target);

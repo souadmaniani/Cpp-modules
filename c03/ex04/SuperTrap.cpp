@@ -2,18 +2,18 @@
 
 SuperTrap::SuperTrap()
 {
-	std::cout << "\033[0;35mDefault constructor called for SuperTrap\033[0m" << std::endl;
+	std::cout << "\033[0;33mSuperTrap: Let's get this party started!\033[0m" << std::endl;
 	return;
 }
 
 SuperTrap::~SuperTrap()
 {
-	std::cout << "\033[0;35mDestructor called for SuperTrap\033[0m" << std::endl;
+	std::cout << "\033[0;33mSuperTrap: I'm too pretty to die!\033[0m" << std::endl;
 }
 
 SuperTrap::SuperTrap(std::string name)
 {
-	std::cout << "\033[0;35mConstructor called for SuperTrap\033[0m" << std::endl;
+	std::cout << "\033[0;33mSuperTrap: Let's get this party started!\033[0m" << std::endl;
 	Name = name;
 	Hit_points = FragTrap::Hit_points;
 	Max_hit_points = FragTrap::Max_hit_points;
@@ -51,9 +51,25 @@ void SuperTrap::rangedAttack(std::string const & target)
 
 void SuperTrap::meleeAttack(std::string const & target)
 {
-	// NinjaTrap::meleeAttack(target);
-	std::cout << "SuperTrap, ";
-	std::cout << Name << ", attacks ";
-	std::cout << target << " at range, causing " << Melee_attack_damage;
-	std::cout << " points of damage!\n" ;
+	NinjaTrap::meleeAttack(target);
+}
+
+void SuperTrap::vaulthunter_dot_exe(std::string const & target)
+{
+	FragTrap::vaulthunter_dot_exe(target);
+}
+
+void SuperTrap::ninjaShoebox(FragTrap & rhs)
+{
+	NinjaTrap::ninjaShoebox(rhs);
+}
+
+void SuperTrap::ninjaShoebox(ScavTrap & rhs)
+{
+	NinjaTrap::ninjaShoebox(rhs);
+}
+
+void SuperTrap::ninjaShoebox(NinjaTrap & rhs)
+{
+	NinjaTrap::ninjaShoebox(rhs);
 }

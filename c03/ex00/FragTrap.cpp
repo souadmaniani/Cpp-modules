@@ -2,18 +2,18 @@
 
 FragTrap::FragTrap()
 {
-	std::cout << "\033[1;31mDefault constructor called for FragTrap\033[0m" << std::endl;
+	std::cout << "\033[0;33mFragTrap: Let's get this party started!\033[0m" << std::endl;
 	return;
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "\033[1;31mDestructor called for FragTrap\033[0m" << std::endl;
+	std::cout << "\033[0;33mFragTrap: I'm too pretty to die!\033[0m" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : Name(name)
 {
-	std::cout << "\033[1;31mConstructor called for FragTrap\033[0m" << std::endl;
+	std::cout << "\033[0;33mFragTrap: Let's get this party started!\033[0m" << std::endl;
 	Hit_points = 100;
 	Max_hit_points = 100;
 	Energy_points = 100;
@@ -53,7 +53,7 @@ void FragTrap::rangedAttack(std::string const & target)
 void FragTrap::meleeAttack(std::string const & target)
 {
 	std::cout << "FR4G-TP, " << Name << ", attacks ";
-	std::cout << target << " at range, causing " << Melee_attack_damage;
+	std::cout << target << ", causing " << Melee_attack_damage;
 	std::cout << " points of damage!\n" ;
 }
 
@@ -64,8 +64,9 @@ void FragTrap::takeDamage(unsigned int amount)
 	else if (Hit_points + Armor_damage_reduction - (int)amount > Max_hit_points)
 		Hit_points = Max_hit_points;
 	else
-		Hit_points = Hit_points + Armor_damage_reduction - (int)amount; 
-	std::cout << "Take damage " << "HP: " << Hit_points << "\n";
+		Hit_points = Hit_points + Armor_damage_reduction - (int)amount;
+	std::cout << "Oh my God, I'm leaking! There's oil everywhere!";
+	std::cout << "\033[0;31m HP: " << Hit_points << "\033[m\n";
 }
 
 void FragTrap::beRepaired(unsigned int amount)
@@ -74,17 +75,18 @@ void FragTrap::beRepaired(unsigned int amount)
 		Hit_points = Max_hit_points;
 	else
 		Hit_points += (int)amount;
-	std::cout << "be repaired " << "HP: " << Hit_points << "\n";	
+	std::cout << "Good as new, I think. Am I leaking? " << "\033[0;31m HP: " << Hit_points << "\033[m\n";	
 }
 
 // chasseur de coffre
 void FragTrap::vaulthunter_dot_exe(std::string const & target)
 {
+	std::cout << "\033[0;34mPlace your bets!\033[m\n";
 	if (Energy_points - 25 < 0)
-		std::cout << target << " has no energy\n";
+		std::cout << "\033[0;31m" << "==> "<< target << " has no energy!\033[m\n";
 	else
 	{
 		Energy_points -= 25;
-		std::cout << target <<" has " << Energy_points << " Energy points\n";
+		std::cout << "==> "<< target <<" has " << Energy_points << " Energy points\n";
 	}
 }
