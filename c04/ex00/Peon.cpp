@@ -19,3 +19,7 @@ Peon & Peon::operator=(Peon const & rhs)
     return (*this);
 }
 
+void Victim::getPolymorphed() const
+{
+    std::cout << " has been turned into a pink pony!\n";
+}

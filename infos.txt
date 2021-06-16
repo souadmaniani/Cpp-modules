@@ -51,3 +51,13 @@ Note:When the function is made virtual, C++ determines which function is to be i
 ABSTRACT CLASSES AND INTERFACES
 - virtual function = 0 ==> it can't be implemented (pure method) so we can't instanciat the class
  (abstract class)
+
+/**************************************************************************************/
+When overloaded as a member function, a << b is interpreted as a.operator<<(b),
+so it only takes one explicit parameter (with this as a hidden parameter).
+
+Since this requires that the overload be part of the class used as the left-hand operand,
+it's not useful with normal ostreams and such. It would require that your overload be part
+of the ostream class, not part of your class. Since you're not allowed to modify ostream,
+you can't do that. That leaves only the global overload as an alternative.
+/**************************************************************************************/

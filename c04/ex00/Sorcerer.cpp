@@ -40,6 +40,6 @@ std::ostream & operator<<(std::ostream & o, Sorcerer const & rhs)
 
 void Sorcerer::polymorph(Victim const & rhs) const
 {
-    std::cout << rhs.getName() ;
-    std::cout << " has been turned into a pink pony!\n";
+    rhs.getPolymorphed();
+    std::cout << rhs.getName();
 }
