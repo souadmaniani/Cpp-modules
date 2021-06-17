@@ -55,22 +55,23 @@ ScavTrap & ScavTrap::operator=(ScavTrap const & rhs)
 void    ScavTrap::rangedAttack(std::string const & target)
 {
 	std::cout << "SCAV-TP, " << Name << ", attacks ";
-	std::cout << target << " at range, causing " << Ranged_attack_damage;
-	std::cout << " points of damage!\n" ;
+	std::cout << target << " at range, causing " << "\033[0;31m" << Ranged_attack_damage;
+	std::cout << " points of damage!\033[m. (rangedAttack)\n" ;;
 }
 
 void    ScavTrap::meleeAttack(std::string const & target)
 {
 	std::cout << "SCAV-TP, " << Name << ", attacks ";
-	std::cout << target << ", causing " << Melee_attack_damage;
-	std::cout << " points of damage!\n" ;
+	std::cout << target << ", causing " << "\033[0;31m" << Melee_attack_damage;
+	std::cout << " points of damage!\033[m . (meleeAttack)\n" ;
 }
 
 void ScavTrap::challengeNewcomer(std::string const & target)
 {
 	srand(time(0));
+	std::cout << "\033[0;34mYou wanna fight with me?! Put 'em up!.. Put 'em up?\033[m. (challengeNewcomer)\n";
 	std::cout << "SCAV-TP, " << Name << ", challenges ";
-	std::cout << target << ", its challenge is: ";
-	std::cout << challenges[rand() % 5] << "\n";
+	std::cout << target << ", its challenge is: \n";
+	std::cout << "==> "<< challenges[rand() % 5] << "\n";
 }
 

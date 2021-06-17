@@ -47,25 +47,30 @@ FragTrap & FragTrap::operator=(FragTrap const & rhs)
 void FragTrap::rangedAttack(std::string const & target)
 {
 	std::cout << "FR4G-TP, " << Name << ", attacks ";
-	std::cout << target << " at range, causing " << Ranged_attack_damage;
-	std::cout << " points of damage!\n" ;
+	std::cout << target << " at range, causing " << "\033[0;31m" << Ranged_attack_damage;
+	std::cout << " points of damage!\033[m. (rangedAttack)\n" ;
 }
 
 void FragTrap::meleeAttack(std::string const & target)
 {
 	std::cout << "FR4G-TP, " << Name << ", attacks ";
-	std::cout << target << ", causing " << Melee_attack_damage;
-	std::cout << " points of damage!\n" ;
+	std::cout << target << ", causing " << "\033[0;31m" << Melee_attack_damage;
+	std::cout << " points of damage!\033[m\n" ;
 }
 
 void FragTrap::vaulthunter_dot_exe(std::string const & target)
 {
-	std::cout << "\033[0;34mPlace your bets!\033[m\n";
+	std::string attacks[5] = {
+		"Gun Wizard", "Clap In The Box", "Torgue Fiesta", "Pirate Ship Mode", "Laser Inferno"
+	};
+	int i = rand() % 5;
+	std::cout << "\033[0;34m" << target <<  " was attacking by a " << attacks[i] << "\033[m. (vaulthunter_dot_exe)\n";
 	if (Energy_points - 25 < 0)
 		std::cout << "\033[0;31m" << "==> "<< target << " has no energy!\033[m\n";
 	else
 	{
 		Energy_points -= 25;
-		std::cout << "==> "<< target <<" has " << Energy_points << " Energy points\n";
+		std::cout << "==> "<< target <<" has " << "\033[0;31m" << Energy_points;
+		std::cout << " Energy points \033[m\n";
 	}
 }

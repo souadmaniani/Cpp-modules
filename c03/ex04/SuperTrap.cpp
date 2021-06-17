@@ -15,14 +15,14 @@ SuperTrap::SuperTrap(std::string name)
 {
 	std::cout << "\033[0;33mSuperTrap: Let's get this party started!\033[0m" << std::endl;
 	Name = name;
-	Hit_points = FragTrap::Hit_points;
-	Max_hit_points = FragTrap::Max_hit_points;
-	Energy_points = NinjaTrap::Energy_points;
-	Max_energy_points = NinjaTrap::Max_energy_points;
+	Hit_points = 100;
+	Max_hit_points = 100;
+	Energy_points = 120;
+	Max_energy_points = 120;
 	Level = 1;
-	Melee_attack_damage = NinjaTrap::Melee_attack_damage;
-	Ranged_attack_damage = FragTrap::Ranged_attack_damage;
-	Armor_damage_reduction = FragTrap::Armor_damage_reduction;
+	Melee_attack_damage = 60;
+	Ranged_attack_damage = 20;
+	Armor_damage_reduction = 5;
 }
 
 SuperTrap::SuperTrap(SuperTrap const & src)

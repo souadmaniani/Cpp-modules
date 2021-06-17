@@ -43,15 +43,15 @@ NinjaTrap & NinjaTrap::operator=(NinjaTrap const & rhs)
 void    NinjaTrap::rangedAttack(std::string const & target)
 {
 	std::cout << "NINJA-TP, " << Name << ", attacks ";
-	std::cout << target << ", causing " << Ranged_attack_damage;
-	std::cout << " points of damage!\n" ;
+	std::cout << target << " at range, causing " << "\033[0;31m" << Ranged_attack_damage;
+	std::cout << " points of damage!\033[m. (rangedAttack)\n" ;
 }
 
 void    NinjaTrap::meleeAttack(std::string const & target)
 {
-	std::cout << "NINJA-TP, " << Name << ", attacks ";
-	std::cout << target << " at range, causing " << Melee_attack_damage;
-	std::cout << " points of damage!\n" ;
+    std::cout << "NINJA-TP, " << Name << ", attacks ";
+	std::cout << target << ", causing " << "\033[0;31m" << Melee_attack_damage;
+	std::cout << " points of damage!\033[m . (meleeAttack)\n" ;
 }
 
 void NinjaTrap::ninjaShoebox(FragTrap & rhs)

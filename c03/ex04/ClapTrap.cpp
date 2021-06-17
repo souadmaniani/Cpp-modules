@@ -39,7 +39,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 	else
 		Hit_points = Hit_points + Armor_damage_reduction - (int)amount;
 	std::cout << "Oh my God, I'm leaking! There's oil everywhere!";
-	std::cout << "\033[0;31m HP: " << Hit_points << "\033[m\n";
+	std::cout << "\033[0;31m HP: " << Hit_points << "\033[m. (takeDamage)\n";
 }
 
 void ClapTrap::beRepaired(unsigned int amount)
@@ -48,5 +48,11 @@ void ClapTrap::beRepaired(unsigned int amount)
 		Hit_points = Max_hit_points;
 	else
 		Hit_points += (int)amount;
-	std::cout << "Good as new, I think. Am I leaking? " << "\033[0;31m HP: " << Hit_points << "\033[m\n";	
+	if ((int)amount + Energy_points > Max_energy_points)
+		Energy_points = Max_energy_points;
+	else
+		Energy_points+=(int)amount;
+	std::cout << "Good as new, I think. Am I leaking? " ;
+	std::cout << "\033[0;31m HP: " << Hit_points << "\033[m, \033[0;31m EP: ";
+	std::cout << Energy_points << "\033[m. (beRepaired)\n";
 }

@@ -6,6 +6,7 @@
 int main()
 {
     std::string target("First Target");
+    
     FragTrap liar("Ozakkare");
     std::cout << "****************************************\n";
     ScavTrap scav("yassine");

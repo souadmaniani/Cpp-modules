@@ -41,5 +41,4 @@ std::ostream & operator<<(std::ostream & o, Sorcerer const & rhs)
 void Sorcerer::polymorph(Victim const & rhs) const
 {
     rhs.getPolymorphed();
-    std::cout << rhs.getName();
 }
