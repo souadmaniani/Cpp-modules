@@ -1,5 +1,5 @@
-#ifndef TACTICALMARINE_H
-#define TACTICALMARINE_H
+#ifndef ISPACEMARINE_H
+#define ISPACEMARINE_H
 #include <string>
 #include <iostream>
 

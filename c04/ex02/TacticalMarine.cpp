@@ -1,24 +1,26 @@
-// #include "TacticalMarine.hpp"
+#include "TacticalMarine.hpp"
 
-
-// TacticalMarine::~ISpaceMarine()
-// {
-
-// }
-
-// ISpaceMarine* TacticalMarine::clone() const
-// {
-//     return (this);
-// }
-// void TacticalMarine::battleCry() const
-// {
-
-// }
-// void TacticalMarine::rangedAttack() const
-// {
-
-// }
-// void TacticalMarine::meleeAttack() const
-// {
-
-// }
+TacticalMarine::TacticalMarine()
+{
+    std::cout << "Tactical Marine ready for battle!\n";
+}
+TacticalMarine::~TacticalMarine()
+{
+    std::cout << "Aaargh...\n";
+}
+ISpaceMarine* TacticalMarine::clone() const
+{
+    return ((ISpaceMarine*)this);
+}
+void TacticalMarine::battleCry() const
+{
+    std::cout << "For the holy PLOT!\n";
+}
+void TacticalMarine::rangedAttack() const
+{
+    std::cout << "* attacks with a bolter *\n";
+}
+void TacticalMarine::meleeAttack() const
+{
+    std::cout << "* attacks with a chainsword *\n";
+}
