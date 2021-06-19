@@ -9,16 +9,15 @@ Squad::Squad()
 
 Squad::~Squad()
 {
-    for(int i = 0 ; i < count; i++)
+    int i;
+
+    i = -1;
+    while (++i < count)
     {
         delete units[i];
         units[i] = NULL;    
     }
-    // if (units)
-    // {
-    //     delete [] units;
-    //     units = NULL;
-    // }
+    delete [] units;
 }
 
 int Squad::getCount() const
@@ -39,7 +38,6 @@ ISpaceMarine** Squad::copy_table(ISpaceMarine** dst, ISpaceMarine** src)
     i = -1;
     while (++i < this->count)
         dst[i] = src[i];
-    // std::cout << "count in copy_table: " << this->count << "\n";
     return (dst);
 }
 
@@ -49,7 +47,6 @@ int Squad::push(ISpaceMarine* x)
     ISpaceMarine** tmp;
 
     i = 0;
-    // std::cout << "count in push: " << this->count << "\n";
     if (count)
     {
         if (!x)
@@ -76,26 +73,35 @@ int Squad::push(ISpaceMarine* x)
     return (count);
 }
 
+
+
 Squad::Squad(Squad const & src)
 {
+    std::cout << "Copy Constructor: \n";
     *this = src;
 }
 
 
 Squad & Squad::operator=(Squad const & rhs)
 {
-    // std::cout << "Assignation Operator: \n";
-    // if (this == &rhs)
-    //     return *this;
-    // if (units)
-    // {
-    //     delete [] units;
-    //     delete(units);
-    // std::cout << "delete old units \n";
-    // }
-    // units = new ISpaceMarine*[count];
-    // units = copy_table(units, rhs.units);
-    // std::cout << "replace new units \n";
-    (void)rhs;
+    int i;
+
+    std::cout << "Assignation Operator: \n";
+    if (this == &rhs)
+        return *this;
+    if (units)
+    {
+        i = -1;
+        while (++i < count)
+        {
+            delete units[i];
+            units[i] = NULL;    
+        }
+        delete [] units;
+    }
+    units = new ISpaceMarine*[count];
+    i = -1;
+    while (++i < count)
+        units[i] = rhs.getUnit(i)->clone();
     return (*this);
 }
