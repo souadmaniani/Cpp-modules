@@ -3,6 +3,7 @@
 #include "ICharacter.hpp"
 #include <string>
 #include <iostream>
+// abstract classes may contain (data members)
 class AMateria
 {
 protected:

@@ -14,10 +14,6 @@ Ice::Ice(Ice const & src)
 }
 Ice & Ice::operator=(Ice const & rhs)
 {
-    // While assigning a Materia to another,
-    // copying the type doesn’t make
-    // sense... !!!!!!!
-    this->type = rhs.type;
     this->_xp = rhs._xp;
     return (*this);
 }
@@ -27,6 +23,6 @@ AMateria* Ice::clone() const
 }
 void Ice::use(ICharacter& target)
 {
-    _xp +=10;
-    // std::cout << "* shoots an ice bolt at " << target << " *\n";
+    // _xp +=10;
+    std::cout << "* shoots an ice bolt at " << target.getName() << " *\n";
 }

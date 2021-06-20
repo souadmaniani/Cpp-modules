@@ -3,8 +3,6 @@
 #include "AMateria.hpp"
 class Cure : public AMateria
 {
-private:
-    /* data */
 public:
     Cure();//default
     ~Cure();//destructor

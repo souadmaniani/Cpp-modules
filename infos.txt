@@ -61,3 +61,10 @@ it's not useful with normal ostreams and such. It would require that your overlo
 of the ostream class, not part of your class. Since you're not allowed to modify ostream,
 you can't do that. That leaves only the global overload as an alternative.
 /**************************************************************************************/
+
+/**************************************************************************************/
+DEEP COPY VS SHALLOW COPY
+==> Deep copy stores copies of the object’s value.
+==> shallow Copy stores the references of objects to the original memory address
+======> Deep copy doesn’t reflect changes made to the new/copied object in the original object.
+/**************************************************************************************/
