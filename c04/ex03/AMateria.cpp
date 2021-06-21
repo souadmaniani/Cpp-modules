@@ -1,31 +1,38 @@
 #include "AMateria.hpp"
 
-AMateria::AMateria(std::string const & type)//done
+AMateria::AMateria(std::string const & type)
 {
     this->type = type;
 }
-AMateria::AMateria()//done
+AMateria::AMateria()
 {
 
 }
-AMateria::AMateria(AMateria const & src)//done
+AMateria::AMateria(AMateria const & src)
 {
     *this = src;
 }
-AMateria & AMateria::operator=(AMateria const & rhs)//done
+AMateria & AMateria::operator=(AMateria const & rhs)
 {
-    this->type = rhs.type;
+    std::cout << "AMateria: assignation operator\n";
+    this->_xp = rhs._xp;
     return (*this);
 }
 AMateria::~AMateria()
 {
 
 }
-std::string const & AMateria::getType() const //done
+std::string const & AMateria::getType() const 
 {
     return (this->type);
 }
-unsigned int AMateria::getXP() const //done
+unsigned int AMateria::getXP() const 
 {
     return (this->_xp);
+}
+
+void AMateria::use(ICharacter& target)
+{
+    (void)target;
+    _xp += 10;
 }

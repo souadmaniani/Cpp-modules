@@ -1,11 +1,13 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
 #include "ICharacter.hpp"
+#include "AMateria.hpp"
+
 class Character : public ICharacter
 {
 private:
     std::string name;
-    AMateria *inventory[4];
+    AMateria **inventory;
 public:
     Character();//default
     Character(std::string name);
@@ -13,6 +15,7 @@ public:
     Character & operator=(Character const & rhs);//assignation
     ~Character();//destructor
     std::string const & getName() const;
+    void inventory_list();
     void equip(AMateria* m);
     void unequip(int idx);
     void use(int idx, ICharacter& target);

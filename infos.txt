@@ -1,4 +1,3 @@
-2 to 2.5 per day
 INITIALISATION LIST: 
     Sample::Sample(char p1, int p2) : a1(p1), a2(p2){
         std::cout << this->a1 << "\n";
@@ -36,19 +35,19 @@ ifstream: Stream class to read from files
 /**************************************************************************************/
 
 /**************************************************************************************/
-COPY_CONSTRUCTOR
+    COPY_CONSTRUCTOR
 - a new instance is created
 - with the = assignment operator there is an update of the current instance
 
 /**************************************************************************************/
-THE FOOR POLYMORPHISM IN C++
+    THE FOOR POLYMORPHISM IN C++
 Note:When the function is made virtual, C++ determines which function is to be invoked at
     the runtime based on the type of the object pointed by the base class pointer.
 
 1.Subtype Polymorphism (Runtime Polymorphism).
 2.Ad-hoc Polymorphism (Overloading)
 /**************************************************************************************/
-ABSTRACT CLASSES AND INTERFACES
+    ABSTRACT CLASSES AND INTERFACES
 - virtual function = 0 ==> it can't be implemented (pure method) so we can't instanciat the class
  (abstract class)
 
@@ -61,3 +60,17 @@ it's not useful with normal ostreams and such. It would require that your overlo
 of the ostream class, not part of your class. Since you're not allowed to modify ostream,
 you can't do that. That leaves only the global overload as an alternative.
 /**************************************************************************************/
+
+/**************************************************************************************/
+    DEEP COPY VS SHALLOW COPY
+==> Deep copy stores copies of the object’s value.
+==> shallow Copy stores the references of objects to the original memory address
+======> Deep copy doesn’t reflect changes made to the new/copied object in the original object.
+/**************************************************************************************/
+/**************************************************************************************/
+    TEMPLATE
+==> The simple idea for a template is to pass data type as a parameter so that we don’t
+need to write the same code for different data types
+/**************************************************************************************/
+NOTE:
+    (class TreeItem;)==> It is a forward declaration,

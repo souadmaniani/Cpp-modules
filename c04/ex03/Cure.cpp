@@ -2,7 +2,7 @@
 
 Cure::Cure()
 {
-    type = "ice";
+    type = "cure";
 }
 Cure::~Cure()
 {
@@ -14,7 +14,6 @@ Cure::Cure(Cure const & src)
 }
 Cure & Cure::operator=(Cure const & rhs)
 {
-    this->type = rhs.type;
     this->_xp = rhs._xp;
     return (*this);
 }
@@ -24,6 +23,6 @@ AMateria* Cure::clone() const
 }
 void Cure::use(ICharacter& target)
 {
-    _xp +=10;
-    // std::cout << "* heals "<< target << " ’s wounds *\n";
+    AMateria::use(target);
+    std::cout << "* heals "<< target.getName() << "’s wounds *\n";
 }
