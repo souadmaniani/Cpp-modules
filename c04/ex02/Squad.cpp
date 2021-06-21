@@ -17,13 +17,15 @@ Squad::~Squad()
         delete units[i];
         units[i] = NULL;    
     }
-    delete [] units;
+    if (units)
+        delete [] units;
 }
 
 int Squad::getCount() const
 {
     return (this->count);
 }
+
 ISpaceMarine* Squad::getUnit(int i) const
 {
     if (count == 0)
@@ -47,11 +49,12 @@ int Squad::push(ISpaceMarine* x)
     ISpaceMarine** tmp;
 
     i = 0;
+    // if exists or NULL
     if (count)
     {
         if (!x)
             return 0;
-        while (units[i] != x && i < count)
+        while (i < count && units[i] != x)
             i++;
     }
     if (i == count)
@@ -80,15 +83,15 @@ Squad::Squad(Squad const & src)
     std::cout << "Copy Constructor: \n";
     *this = src;
 }
-
-
+//CHECK LEAKS HERE
 Squad & Squad::operator=(Squad const & rhs)
 {
     int i;
 
-    std::cout << "Assignation Operator: \n";
+    std::cout << "Squad: Assignation Operator: \n";
     if (this == &rhs)
         return *this;
+    this->count = rhs.count;
     if (units)
     {
         i = -1;
@@ -98,6 +101,7 @@ Squad & Squad::operator=(Squad const & rhs)
             units[i] = NULL;    
         }
         delete [] units;
+        units= NULL;
     }
     units = new ISpaceMarine*[count];
     i = -1;

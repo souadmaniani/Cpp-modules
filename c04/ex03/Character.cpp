@@ -5,7 +5,6 @@ Character::Character()
 }
 Character::Character(std::string name)
 {
-	std::cout << "*****Character*****\n";
 	int i;
 
 	i = -1;
@@ -16,12 +15,12 @@ Character::Character(std::string name)
 }
 Character::~Character()
 {
-	std::cout << "Character: destructor\n";
 	int i;
 
 	i = -1;
 	while (++i < 4)
 	{
+
 		if (inventory[i])
 		{
 			delete inventory[i];
@@ -34,8 +33,10 @@ Character::~Character()
 
 Character::Character(Character const & src)
 {
+	std::cout << "Character: copy constructor\n";
     *this = src;
 }
+
 Character & Character::operator=(Character const & rhs)
 {
 	std::cout << "Character: assignation operator\n";
@@ -43,7 +44,6 @@ Character & Character::operator=(Character const & rhs)
 
 	i = -1;
 	this->name = rhs.name;
-	// delete old Inventory
 	while (++i < 4)
 	{
 		if (inventory[i])
@@ -63,7 +63,6 @@ Character & Character::operator=(Character const & rhs)
 			this->inventory[i] = NULL;
 		else
 			this->inventory[i] = rhs.inventory[i]->clone();
-
 	}
 	return *this;
 }
@@ -71,18 +70,6 @@ Character & Character::operator=(Character const & rhs)
 std::string const & Character::getName() const
 {
     return (this->name);
-}
-
-void Character::inventory_list()
-{
-	int i;
-
-	i = -1;
-	while (++i < 4)
-	{
-		std::cout << this->inventory[i] << "|";
-	}
-	std::cout << "\n";
 }
 
 void Character::equip(AMateria* m)
@@ -93,21 +80,22 @@ void Character::equip(AMateria* m)
 		if (!inventory[i])
 		{
 			inventory[i] = m->clone();
-			std::cout << "Add Materia to inventory\n";
 			break;
 		}
 	}
 }
 void Character::unequip(int idx)
 {
-	std::cout << "idx: " << idx << "\n";
 	if (inventory[idx])
+	{
 		delete inventory[idx];
+		inventory[idx] = NULL;
+	}
 }
 void Character::use(int idx, ICharacter& target)
 {
 	if (idx >= 0 && idx < 4)
 		if(inventory[idx])
 			inventory[idx]->use(target);
-
 }
+

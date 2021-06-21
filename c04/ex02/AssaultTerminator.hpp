@@ -5,8 +5,10 @@
 class AssaultTerminator : public ISpaceMarine
 {
 public:
-    AssaultTerminator();
-    ~AssaultTerminator();
+    AssaultTerminator();//default
+    ~AssaultTerminator();//destructor
+    AssaultTerminator(AssaultTerminator const & src);//copy
+    AssaultTerminator & operator=(AssaultTerminator const & rhs);//assignation
     ISpaceMarine* clone() const;
     void battleCry() const;
     void rangedAttack() const;

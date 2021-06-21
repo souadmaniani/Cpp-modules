@@ -2,7 +2,6 @@
 
 MateriaSource::MateriaSource()
 {
-    std::cout << "*****MateriaSource*****\n";
     int i;
 
 	i = -1;
@@ -13,7 +12,6 @@ MateriaSource::MateriaSource()
 }
 MateriaSource::~MateriaSource()
 {
-    std::cout << "MateriaSource: destructor\n";
     int i;
 
 	i = -1;
@@ -52,7 +50,16 @@ MateriaSource & MateriaSource::operator=(MateriaSource const & rhs)
 	i = -1;
 	inventory = new AMateria*[4];
 	while (++i < 4)
-		this->inventory[i] = rhs.inventory[i]->clone();
+	{
+		if (!rhs.inventory[i])
+			this->inventory[i] = NULL;
+		else
+		{
+			this->inventory[i] = rhs.inventory[i]->clone();
+			std::cout << "type: " << inventory[i]->getType() << " | ";
+			std::cout << "xp: " << inventory[i]->getXP() << "\n";
+		}
+	}
 	return *this;
 }
 void MateriaSource::learnMateria(AMateria* m)
@@ -64,7 +71,6 @@ void MateriaSource::learnMateria(AMateria* m)
     {
         if (!inventory[i])
         {
-            std::cout << "index: " << i << " ** learn Materia \n";
             inventory[i] = m;
             break ;
         }
@@ -77,10 +83,7 @@ AMateria* MateriaSource::createMateria(std::string const & type)
     while (++i < 4)
     {
         if (inventory[i]->getType() == type)
-        {
-            std::cout << "waaaaay!!!! Find type: " << type << "\n";
             return (inventory[i]->clone());
-        }
     }
     return 0;
 }

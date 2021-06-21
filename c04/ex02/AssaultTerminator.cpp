@@ -7,11 +7,22 @@ AssaultTerminator::AssaultTerminator()
 
 AssaultTerminator::~AssaultTerminator()
 {
-    std::cout << "I’ll be back...\n";
+    std::cout << "I'll be back...\n";
 }
+AssaultTerminator::AssaultTerminator(AssaultTerminator const & src)
+{
+    *this = src;
+}
+
+AssaultTerminator & AssaultTerminator::operator=(AssaultTerminator const & rhs)
+{
+    (void)rhs;
+    return *this;
+}
+
 ISpaceMarine* AssaultTerminator::clone() const
 {
-    return ((ISpaceMarine*)this);
+    return (new AssaultTerminator(*this));
 }
 void AssaultTerminator::battleCry() const
 {
