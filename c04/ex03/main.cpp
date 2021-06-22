@@ -7,26 +7,17 @@ int main()
 {
     
     IMateriaSource* src = new MateriaSource();
-    // Learn  Materia
     src->learnMateria(new Ice());
     src->learnMateria(new Cure());
-    // Learn Materia done
-
-    // Create Materia
     ICharacter* me = new Character("me");
     AMateria* tmp;
     tmp = src->createMateria("ice");
     me->equip(tmp);
     tmp = src->createMateria("cure");
     me->equip(tmp);
-    // Create Materia done
-    
-    // Use Character
     ICharacter* bob = new Character("bob");
     me->use(0, *bob);
     me->use(1, *bob);
-    // Use Character done
-
     /************* Test *************/
     // std::cout << "-----------------------------" << "\n";
     // Character* oussama = new Character("oussama");
@@ -51,6 +42,8 @@ int main()
     // std::cout << "-----------------------------" << "\n";
     // souad->use(0, *souad); 
     // souad->use(1, *souad);
+    // delete souad;
+    // delete oussama;
     /************* End Test*************/
 
     delete bob;

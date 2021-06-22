@@ -56,8 +56,8 @@ MateriaSource & MateriaSource::operator=(MateriaSource const & rhs)
 		else
 		{
 			this->inventory[i] = rhs.inventory[i]->clone();
-			std::cout << "type: " << inventory[i]->getType() << " | ";
-			std::cout << "xp: " << inventory[i]->getXP() << "\n";
+			this->inventory[i]->setType(rhs.inventory[i]->getType());
+			this->inventory[i]->setXP(rhs.inventory[i]->getXP());
 		}
 	}
 	return *this;

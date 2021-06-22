@@ -31,6 +31,14 @@ unsigned int AMateria::getXP() const
     return (this->_xp);
 }
 
+void AMateria::setType(std::string type)
+{
+    this->type = type;
+}
+void AMateria::setXP(int xp)
+{
+    this->_xp = xp;
+}
 void AMateria::use(ICharacter& target)
 {
     (void)target;

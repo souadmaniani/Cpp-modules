@@ -17,6 +17,8 @@ public:
     virtual ~AMateria();//destructor
     std::string const & getType() const; //Returns the materia type
     unsigned int getXP() const; //Returns the Materia's XP
+    void setType(std::string type);
+    void setXP(int xp);
     virtual AMateria* clone() const = 0;
     virtual void use(ICharacter& target);
 };
