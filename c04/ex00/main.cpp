@@ -1,5 +1,6 @@
 #include "Sorcerer.hpp"
 #include "Peon.hpp"
+#include "Cat.hpp"
 
 int main()
 {
@@ -12,6 +13,8 @@ int main()
 
     robert.polymorph(jim);
     robert.polymorph(joe);
-    
+    /********************* TESTS *******************/
+    Cat f
+    /***********************************************/
     return 0;
 }
