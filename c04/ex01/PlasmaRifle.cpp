@@ -21,7 +21,7 @@ PlasmaRifle::~PlasmaRifle()
 {
 }
 
-void AWeapon::attack() const
+void PlasmaRifle::attack() const
 {
     std::cout << "* piouuu piouuu piouuu *\n";
 }

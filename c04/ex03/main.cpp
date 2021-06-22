@@ -36,6 +36,7 @@ int main()
     // Character* mohammed = new Character("mohammed");
     // tmp->use(*mohammed);
     // tmp->use(*mohammed);
+    // tmp->use(*mohammed);
     // std::cout << "XP: " << tmp->getXP() << "\n";
     // std::cout << "-----------------------------" << "\n";
     // oussama->equip(tmp);

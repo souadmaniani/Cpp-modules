@@ -17,6 +17,7 @@ public:
     Character & operator=(Character const & rhs);//assignation
     ~Character();//destructor
     int getAP() const;
+    void setAP(int ap);
     AWeapon *getAWeapon() const;
     void recoverAP();
     void equip(AWeapon*);

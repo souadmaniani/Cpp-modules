@@ -1,8 +1,8 @@
 #include "Ice.hpp"
 
-Ice::Ice()
+Ice::Ice() : AMateria("ice")
 {
-    type = "ice";
+
 }
 Ice::~Ice()
 {

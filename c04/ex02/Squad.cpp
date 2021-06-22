@@ -57,7 +57,7 @@ int Squad::push(ISpaceMarine* x)
         while (i < count && units[i] != x)
             i++;
     }
-    if (i == count)
+    if (i == count)     
     {
         if (units)
         {
@@ -83,7 +83,7 @@ Squad::Squad(Squad const & src)
     std::cout << "Copy Constructor: \n";
     *this = src;
 }
-//CHECK LEAKS HERE
+
 Squad & Squad::operator=(Squad const & rhs)
 {
     int i;

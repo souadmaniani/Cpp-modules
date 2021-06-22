@@ -1,10 +1,8 @@
 #include "SuperMutant.hpp"
 
-SuperMutant::SuperMutant()
+SuperMutant::SuperMutant() : Enemy(170, "Super Mutant")
 {
     std::cout << "Gaaah. Me want smash heads!\n";
-    this->HP = 170;
-    this->type = "Super Mutant";
 }
 
 SuperMutant::~SuperMutant()
@@ -21,10 +19,14 @@ SuperMutant & SuperMutant::operator=(SuperMutant const & rhs)
     this->type = rhs.type;
     return *this;
 }
-void Enemy::takeDamage(int amount)
+void SuperMutant::takeDamage(int amount)
 {
-    if (HP - amount + 3 > 0)
-        HP-=amount;
-    else
-        HP = 0;
+    amount -=3;
+    if (amount >= 0)
+    {
+        if (HP - amount > 0)
+            HP-=amount;
+        else
+            HP = 0;
+    }
 }

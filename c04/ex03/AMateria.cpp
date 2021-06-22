@@ -1,6 +1,6 @@
 #include "AMateria.hpp"
 
-AMateria::AMateria(std::string const & type)
+AMateria::AMateria(std::string const & type) : _xp(0)
 {
     this->type = type;
 }

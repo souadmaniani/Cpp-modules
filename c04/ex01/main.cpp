@@ -1,7 +1,6 @@
 #include "Character.hpp"
-//Enemy
 #include "RadScorpion.hpp"
-// Weapon
+#include "SuperMutant.hpp"
 #include "PowerFist.hpp"
 #include "PlasmaRifle.hpp"
 
@@ -23,5 +22,15 @@ int main()
     std::cout << *me;
     me->attack(b);
     std::cout << *me;
+    /*********************** TESTS **********************/
+    // std::cout << "----------------------------------------\n";
+    // me->recoverAP();
+    // me->recoverAP();
+    // std::cout << *me;
+    // Enemy* c = new SuperMutant();
+    // me->attack(c);
+    // std::cout << c->getType() << " has " << c->getHP() << " HP\n" ;
+    /******************************************************/
+    
     return 0;
 }

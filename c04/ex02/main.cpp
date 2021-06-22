@@ -32,5 +32,6 @@ int main()
     // delete rhs;
     /********************* END TEST ******************************/
     delete vlc;
+    
     return 0;
 }

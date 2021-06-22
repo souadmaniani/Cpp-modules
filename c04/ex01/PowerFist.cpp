@@ -21,7 +21,7 @@ PowerFist::~PowerFist()
 {
 }
 
-void AWeapon::attack() const
+void PowerFist::attack() const
 {
     std::cout << "* pschhh... SBAM! *\n";
 }

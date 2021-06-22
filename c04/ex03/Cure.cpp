@@ -1,8 +1,8 @@
 #include "Cure.hpp"
 
-Cure::Cure()
+Cure::Cure(): AMateria("cure")
 {
-    type = "cure";
+
 }
 Cure::~Cure()
 {

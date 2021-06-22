@@ -1,10 +1,8 @@
 #include "RadScorpion.hpp"
 
-RadScorpion::RadScorpion()
+RadScorpion::RadScorpion() : Enemy(80, "RadScorpion")
 {
     std::cout << "* click click click *\n";
-    this->HP = 80;
-    this->type = "RadScorpion";
 }
 
 RadScorpion::~RadScorpion()
@@ -21,10 +19,7 @@ RadScorpion & RadScorpion::operator=(RadScorpion const & rhs)
     this->type = rhs.type;
     return *this;
 }
-void Enemy::takeDamage(int amount)
+void RadScorpion::takeDamage(int amount)
 {
-    if (HP - amount + 3 > 0)
-        HP-=amount;
-    else
-        HP = 0;
+   Enemy::takeDamage(amount);
 }

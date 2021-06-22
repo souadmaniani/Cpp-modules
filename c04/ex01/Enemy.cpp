@@ -9,6 +9,7 @@ Enemy::Enemy(int hp, std::string const & type)
 }
 Enemy::~Enemy()
 {
+
 }
 Enemy::Enemy(Enemy const & src)
 {
@@ -20,11 +21,25 @@ Enemy & Enemy::operator=(Enemy const & rhs)
     this->type = rhs.type;
     return *this;
 }
-
+ std::string const & Enemy::getType() const
+ {
+     return (this->type);
+ }
+int Enemy::getHP() const
+{
+    return (this->HP);
+}
+void Enemy::setHP(int hp)
+{
+    this->HP = hp;
+}
 void Enemy::takeDamage(int amount)
 {
-    if (HP - amount > 0)
-        HP-=amount;
-    else
-        HP = 0;
+    if (amount >= 0)
+    {
+        if (HP - amount > 0)
+            HP-=amount;
+        else
+            HP = 0;
+    }
 }
