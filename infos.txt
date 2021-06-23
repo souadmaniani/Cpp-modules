@@ -65,7 +65,7 @@ you can't do that. That leaves only the global overload as an alternative.
     DEEP COPY VS SHALLOW COPY
 ==> Deep copy stores copies of the object’s value.
 ==> shallow Copy stores the references of objects to the original memory address
-======> Deep copy doesn’t reflect changes made to the new/copied object in the original object.
+==> Deep copy doesn’t reflect changes made to the new/copied object in the original object.
 /**************************************************************************************/
 /**************************************************************************************/
     TEMPLATE
@@ -74,3 +74,12 @@ need to write the same code for different data types
 /**************************************************************************************/
 NOTE:
     (class TreeItem;)==> It is a forward declaration,
+
+/**************************************************************************************/
+    EXCEPTION
+==> if a statement that is not within a try block throws an exception, or a statement within
+a try block throws an exception that is not caught, the program terminates.
+==> Throwing an exception leaves the try block immediately, so at that point all the automatic
+objects that have been defined within the try block prior to the exception being thrown are destroyed.
+==> An exception object must be of a type that can be copied
+/**************************************************************************************/
