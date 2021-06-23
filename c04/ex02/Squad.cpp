@@ -89,13 +89,13 @@ Squad & Squad::operator=(Squad const & rhs)
     int i;
 
     std::cout << "Squad: Assignation Operator: \n";
-    if (this == &rhs)
-        return *this;
+   if (this == &rhs)
+        return *this; 
     this->count = rhs.count;
     if (units)
     {
         i = -1;
-        while (++i < count)
+        while (++i < count && units[i])
         {
             delete units[i];
             units[i] = NULL;    

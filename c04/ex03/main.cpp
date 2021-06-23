@@ -44,6 +44,8 @@ int main()
     // souad->use(1, *souad);
     // delete souad;
     // delete oussama;
+    // delete tmp;
+    // delete mohammed;
     /************* End Test*************/
 
     delete bob;

@@ -8,7 +8,7 @@ public:
     PowerFist(void);//default
     PowerFist(PowerFist const & src);//copy
     PowerFist & operator=(PowerFist const & rhs);//assignation operator
-    ~PowerFist();//destructor
+    virtual ~PowerFist();//destructor
     void attack() const;
 };
 

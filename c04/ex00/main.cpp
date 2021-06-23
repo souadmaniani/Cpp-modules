@@ -11,6 +11,14 @@ int main()
     robert.polymorph(jim);
     robert.polymorph(joe);
     /********************* TESTS *******************/
+    // non-virtual destructor cause undefined behavior
+    // std::cout << "---------------------------\n";
+    // Peon *d = new Peon("Ross");  
+    // Victim *b = d;
+    // delete b;
+    // std::cout << "---------------------------\n";
+    // it cannot instanciat without parameters
+    // Sorcerer *roberto = new Sorcerer();
     // std::cout << "---------------------------\n";
     // Cat lily("Lily");
     // std::cout << lily;

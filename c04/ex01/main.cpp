@@ -30,6 +30,10 @@ int main()
     // Enemy* c = new SuperMutant();
     // me->attack(c);
     // std::cout << c->getType() << " has " << c->getHP() << " HP\n" ;
+    // delete c;
+    // delete me;
+    // delete pr;
+    // delete pf;
     /******************************************************/
     
     return 0;

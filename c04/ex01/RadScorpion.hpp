@@ -8,7 +8,7 @@ public:
     RadScorpion();//default
     RadScorpion(RadScorpion const & src);//copy
     RadScorpion & operator=(RadScorpion const & rhs);//assignation
-    ~RadScorpion();//destructor
+    virtual ~RadScorpion();//destructor
     void takeDamage(int);
 };
 

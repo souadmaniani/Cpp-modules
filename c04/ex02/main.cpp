@@ -20,7 +20,10 @@ int main()
     // std::cout << "*********** USE THE ASSIGNATION OPERATOR ***********\n";
     // Squad *rhs = new Squad;
     // *rhs = *vlc;
+    // Squad copy (*vlc);
     // delete vlc;
+    // std::cout <<"Number of units in the copy: "<< copy.getCount() << "\n";
+    // std::cout << "-------------------------------------\n";
     // for (int i = 0; i < rhs->getCount(); ++i)
     // {
     //     ISpaceMarine* cur = rhs->getUnit(i);

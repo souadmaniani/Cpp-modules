@@ -10,7 +10,7 @@ public:
     Cat(Cat const & src);
     Cat & operator=(Cat const & rhs);
     void getPolymorphed() const;
-    ~Cat(void);
+    virtual ~Cat(void);
 };
 
 #endif

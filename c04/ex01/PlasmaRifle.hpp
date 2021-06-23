@@ -8,7 +8,7 @@ public:
     PlasmaRifle(void);//default
     PlasmaRifle(PlasmaRifle const & src);//copy
     PlasmaRifle & operator=(PlasmaRifle const & rhs);//assignation operator
-    ~PlasmaRifle();//destructor
+    virtual ~PlasmaRifle();//destructor
     void attack() const;
 };
 

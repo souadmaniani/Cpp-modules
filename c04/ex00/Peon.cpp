@@ -1,5 +1,8 @@
 #include "Peon.hpp"
-
+Peon::Peon()
+{
+    
+}
 Peon::Peon(std::string peon_name) : Victim::Victim(peon_name)
 {
     std::cout << "Zog zog.\n";

@@ -14,7 +14,7 @@ public:
     Victim & operator=(Victim const & rhs);
     std::string getName(void) const;
     virtual void getPolymorphed() const; 
-    ~Victim(void);
+    virtual ~Victim(void);
 };
 
 std::ostream & operator<<(std::ostream & o, Victim const & rhs);
