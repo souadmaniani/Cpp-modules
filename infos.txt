@@ -77,9 +77,11 @@ NOTE:
 
 /**************************************************************************************/
     EXCEPTION
-==> if a statement that is not within a try block throws an exception, or a statement within
-a try block throws an exception that is not caught, the program terminates.
-==> Throwing an exception leaves the try block immediately, so at that point all the automatic
-objects that have been defined within the try block prior to the exception being thrown are destroyed.
-==> An exception object must be of a type that can be copied
+try {
+  // Block of code to try
+  throw exception; // Throw an exception when a problem arise
+}
+catch () {
+  // Block of code to handle errors
+}
 /**************************************************************************************/
