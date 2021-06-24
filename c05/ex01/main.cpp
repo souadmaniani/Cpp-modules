@@ -5,7 +5,7 @@ int main()
     // low than 1
     try
     {
-       Bureaucrat ozakkare("ozakkare", -13);
+       Bureaucrat ozakkare("ozakkare", 0);
        std::cout << ozakkare;
     }
     catch(const std::exception& e)

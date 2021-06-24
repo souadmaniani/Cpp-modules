@@ -19,12 +19,14 @@ public:
     class GradeTooLowException : public std::exception
     {
     public:
-        virtual const char* what() const noexcept;
+        virtual const char* what() const _NOEXCEPT;
     };
 
-    Bureaucrat();
+    Bureaucrat(); //default
     Bureaucrat(std::string name, int grade);
-    ~Bureaucrat();
+    ~Bureaucrat(); //destructor
+    Bureaucrat(Bureaucrat const & src); //copy
+    Bureaucrat & operator=(Bureaucrat const & rhs); //assignation
     std::string const getName(void) const;
     int getGrade(void) const;
     void increment() ;
