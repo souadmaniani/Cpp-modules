@@ -1,32 +1,36 @@
-#include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main()
 {
-    // low than 1
+    // not a valid _gradeTosign
     try
     {
-       Bureaucrat ozakkare("ozakkare", 0);
-       std::cout << ozakkare;
+        Form my_form("Certificate", 160, 4);
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what();
     }
-    // high than 150
+    std::cout << "----------------------------------------------------------\n";
+    // not a valid grade
     try
     {
-       Bureaucrat smaniani("smaniani", 151);
-       std::cout << smaniani;
+        Form my_form("Certificate", 1, 4);
+        Bureaucrat smaniani("smaniani", 2);
+        smaniani.signForm(my_form);
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what();
     }
-    // normal case
-    try
+    std::cout << "----------------------------------------------------------\n";
+    // a valid grades
+     try
     {
-       Bureaucrat ozakkare("ozakkare", 37);
-       std::cout << ozakkare;
+        Form my_form("Certificate", 2, 4);
+        Bureaucrat smaniani("smaniani", 1);
+        smaniani.signForm(my_form);
+        std::cout << my_form;
     }
     catch(const std::exception& e)
     {

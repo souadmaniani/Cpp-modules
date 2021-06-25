@@ -2,6 +2,7 @@
 #define FORM_H
 #include <string>
 #include <iostream>
+#include <fstream>
 #include "Bureaucrat.hpp"
 
 class Form
@@ -30,6 +31,7 @@ public:
     int getGradeToExecute(void) const;
     bool getSign(void) const;
     void beSigned(Bureaucrat const & target);
+    virtual void execute(Bureaucrat const & executor) const = 0;
 };
 
 std::ostream & operator<<(std::ostream & o, Form const & rhs);

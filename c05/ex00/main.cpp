@@ -12,6 +12,7 @@ int main()
     {
         std::cerr << e.what();
     }
+    std::cout << "------------------------------\n";
     // high than 150
     try
     {
@@ -22,6 +23,7 @@ int main()
     {
         std::cerr << e.what();
     }
+    std::cout << "------------------------------\n";
     // normal case
     try
     {

@@ -47,7 +47,22 @@ void Form::beSigned(Bureaucrat const & target)
     else
         throw (GradeTooLowException());
 }
+// void Form::execute(Bureaucrat const & executor) const
+// {
+//     try
+//     {
+//         if (this.beSigned(executor))
+//         {
 
+//         }
+
+//     }
+//     catch(const std::exception& e)
+//     {
+//         std::cerr << e.what() << '\n';
+//     }
+    
+// }
 std::ostream & operator<<(std::ostream & o, Form const & rhs)
 {
     if (rhs.getSign())
