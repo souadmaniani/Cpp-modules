@@ -13,21 +13,22 @@ private:
 public:
     class GradeTooHighException : public std::exception
     {
-        
-    }
+        const char * what() const noexcept;
+    };
     class GradeTooLowException : public std::exception
     {
-
-    }
+        const char * what() const noexcept;
+    };
     Form();
+    Form(std::string name, bool sign, int toSign, int toExecute);
     Form(Form const & src);
-    Form & operator(Form const & rhs);
+    Form & operator=(Form const & rhs);
     ~Form();
     std::string getName(void);
     int getGradeTosignForm(void);
     int getGradeToExecuteForm(void);
     bool getSign(void);
-    void beSigned(Bureaucrat & target);
+    void beSigned(Bureaucrat const & target);
 };
 
 std::ostream & operator<<(std::ostream & o, Form const & rhs);
