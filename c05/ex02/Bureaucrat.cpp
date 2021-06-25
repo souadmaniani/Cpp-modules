@@ -20,6 +20,17 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 		_grade = grade;
 }
 
+Bureaucrat::Bureaucrat(Bureaucrat const & src)
+{
+	*this = src;
+}
+
+Bureaucrat & Bureaucrat::operator=(Bureaucrat const & rhs)
+{
+	this->_grade = rhs.getGrade();
+	return (*this);
+}
+
 std::string const Bureaucrat::getName(void) const
 {
 	return this->_name;
@@ -84,7 +95,7 @@ void Bureaucrat::executeForm(Form const & form)
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what();
-		std::cout << std::cout << this->getName() << " cannot execute " << form.getName() << "\n";
+		std::cout << e.what();
+		std::cout << this->getName() << " cannot execute " << form.getName() << "\n";
 	}
 }
