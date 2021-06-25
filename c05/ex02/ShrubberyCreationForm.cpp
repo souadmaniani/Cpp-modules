@@ -4,11 +4,9 @@ ShrubberyCreationForm::ShrubberyCreationForm()
 {
     
 }
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : Form("ShrubberyCreationForm", 145, 137), target(target)
 {
-    this->sign = 145;
-    this->exec = 137;
-    this->target = target;
+    std::cout << "Constructor ShrubberyCreationForm\n";
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
@@ -16,28 +14,18 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 }
 ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const & src)
 {
-
+    *this = src;
 }
 ShrubberyCreationForm & ShrubberyCreationForm::operator=(ShrubberyCreationForm const & rhs)
 {
-
+    this->target = rhs.target;
+    return (*this);
 }
-void ShrubberyCreationForm::executeAction()
+//  write ASCII trees inside the file
+void ShrubberyCreationForm::executeAction(Bureaucrat const & executor) const
 {
+    execute(executor);
     std::ofstream MyFile(target + "_shrubbery");
-    MyFile << "Files can be tricky, but it is fun enough!";
+    MyFile << " ************************";
     MyFile.close();
 }
-// void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
-// {
-//     try
-//     {
-//         if (executor.getGrade() <= this->sign && executor.getGrade() <= this->exec)
-
-//     }
-//     catch(const std::exception& e)
-//     {
-//         std::cerr << e.what() << '\n';
-//     }
-    
-// }

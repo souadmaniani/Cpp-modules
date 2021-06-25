@@ -1,5 +1,7 @@
 #include "Form.hpp"
-
+Form::Form()
+{
+}
 Form::Form(std::string name, int toSign, int toExecute) :
 _name(name), _gradeTosign(toSign), _gradeToExecute(toExecute)
 {
@@ -47,22 +49,20 @@ void Form::beSigned(Bureaucrat const & target)
     else
         throw (GradeTooLowException());
 }
-// void Form::execute(Bureaucrat const & executor) const
-// {
-//     try
-//     {
-//         if (this.beSigned(executor))
-//         {
+void Form::execute(Bureaucrat const & executor) const
+{
+   try
+   {
+       
+       if (!(this->getSign() && executor.getGrade() <= this->getGradeToExecute()))
+            throw (GradeTooLowException());
+   }
+   catch(const std::exception& e)
+   {
+       std::cerr << e.what();
+   }
+}
 
-//         }
-
-//     }
-//     catch(const std::exception& e)
-//     {
-//         std::cerr << e.what() << '\n';
-//     }
-    
-// }
 std::ostream & operator<<(std::ostream & o, Form const & rhs)
 {
     if (rhs.getSign())
