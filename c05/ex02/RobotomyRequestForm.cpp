@@ -25,7 +25,17 @@ RobotomyRequestForm & RobotomyRequestForm::operator=(RobotomyRequestForm const &
 }
 
 void RobotomyRequestForm::executeAction() const
-{
-    std::cout << "lololo lololo\n";
-    std::cout << this->target << "as been robotomized successfully 50% of the time\n";
+{   
+    srand(time(0));
+    int random = rand() % 6;
+    
+    if (random < 3)
+    {
+        std::cout << "lololo lololo\n";
+        std::cout << this->target << "as been robotomized successfully 50% of the time\n";
+    }
+    else
+        std::cout << "it’s a failure\n";
+
 }
+

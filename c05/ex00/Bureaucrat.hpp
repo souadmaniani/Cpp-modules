@@ -20,6 +20,7 @@ public:
     {
     public:
         virtual const char* what() const _NOEXCEPT;
+    
     };
 
     Bureaucrat(); //default

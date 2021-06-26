@@ -23,10 +23,10 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator=(ShrubberyCreationForm c
     this->target = rhs.target;
     return (*this);
 }
-//  write ASCII trees inside the file
+
 void ShrubberyCreationForm::executeAction() const
 {
     std::ofstream MyFile(target + "_shrubbery");
-    MyFile << " ************************";
+    MyFile << "       ###\n      #o###\n    #####o###\n   #o#\\#|#/###\n    ###\\|/#o#\n     # }|{  #\n       }|{";
     MyFile.close();
 }

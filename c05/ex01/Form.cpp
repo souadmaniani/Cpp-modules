@@ -14,10 +14,6 @@ _name(name), _gradeTosign(toSign), _gradeToExecute(toExecute)
 Form::~Form()
 {
 }
-Form::Form(Form const & src)
-{
-    *this = src;
-}
 
 std::string  Form::getName(void) const
 {
