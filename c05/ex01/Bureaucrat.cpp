@@ -72,6 +72,7 @@ void Bureaucrat::signForm(Form & target)
 	catch(const std::exception& e)
 	{
 		std::cout << this->getName() << " cannot sign " << target.getName() ;
+
 		std::cout << " because " << e.what();
 	}
 	

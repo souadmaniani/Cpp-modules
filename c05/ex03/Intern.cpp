@@ -8,15 +8,6 @@ Intern::~Intern()
 {
 }
 
-// Form* Intern::makeForm(std::string name, std::string target)
-// {
-//     std::string formsName[] = {"shrubbery creation", "robotomy request", "presidential pardon"};
-//     Form*   rrf;
-    
-//     return (rrf);
-// }
-
-
 
 Form* Intern::makeForm(std::string name, std::string target)
 {
