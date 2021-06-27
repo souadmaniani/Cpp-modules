@@ -2,24 +2,13 @@
 #include <iostream>
 #include <limits>
 
-using namespace std;
+// std::cout   << "int_max: "    << std::numeric_limits<int>::max() << "\n"
+//             << "int_min: "    << std::numeric_limits<int>::min() << "\n"
+//             << "float_max: "  << std::numeric_limits<float>::max() << "\n"
+//             << "float_min: "  << std::numeric_limits<float>::min() << "\n"
+//             << "double_max: " << std::numeric_limits<double>::max() << "\n"
+//             << "double_min: " << std::numeric_limits<double>::min() << "\n";
 
-template<typename T>
-void showMinMax() {
-   cout << "min: " << numeric_limits<T>::min() << endl;
-   cout << "max: " << numeric_limits<T>::max() << endl;
-   cout << endl;
-}
-
-int main() {
-
-   cout << "float:" << endl;
-   showMinMax<float>();
-   cout << "double:" << endl;
-   showMinMax<double>();
-   cout << "int:" << endl;
-   showMinMax<int>();
-}
 // int main(int argc, char *argv[])
 // {
 // 	//  we use reinterpret cast when we lost type information of a data
@@ -58,11 +47,19 @@ int main() {
 // 		// }
 // 		// std::cout << INT_MAX << " " << FLOAT_MAX << " " << DOUBLE_
 
-
-
-
-
-
-
 // 	}
 // }
+int main()
+{
+   int a = 42;
+	double b = a;
+	int c = b;
+	int d = static_cast<int>(b); 
+	std::cout << b << " " << c << " " << d << "\n";  
+
+   // double t = 1.79769e+308;
+   // float g = static_cast<float>(t);
+   // float k = t;
+   // float l = (double)t;
+   // std::cout << t << " "<< g<< " "<< k << " "<< l<<  "\n";
+}

@@ -1,16 +1,21 @@
 #include "convert.hpp"
 
-int is_number(std::string str)
-{
-	int i;
+// int isnumber(std::string str)
+// {
+// 	int i;
 
-	i = 0;
-	while (str[i])
-	{
-		if (isdigit(str[i]))
-			i++;
-		else
-			return (0);
-	}
-	return (1);
-}
+// 	i = -1;
+// 	while (str[++i])
+// 	{
+// 		if (!isdigit(str[i]))
+// 			return (0);
+// 	}
+// 	return (1);
+// }
+
+// int	ft_isprint(int c)
+// {
+// 	if (c >= 32 && c <= 126)
+// 		return (1);
+// 	return (0);
+// }
