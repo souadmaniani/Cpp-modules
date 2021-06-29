@@ -2,6 +2,7 @@
 #define CONVERT_H
 #include  <iostream>
 #include <string>
+#include <math.h>
 // float : 0.0f,-4.2f,4.2f, -inff,+inff, nan
 // double : 0.0,-4.2,4.2, -inf,+inf, nan
 #define MAX_INT 2147483647

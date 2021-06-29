@@ -1,16 +1,19 @@
 #ifndef SERIALISATION_H
 #define SERIALISATION_H
+#include <sstream>
+#include <unistd.h>
+#include <stdint.h>
+#include <ctime>
+#include <cstdlib>
 #include <iostream>
 
-struct mystruct {
+typedef struct Data {
     int x;
-    int y;
     char c;
-    bool b;
-};
+    std::string str;
+}               Data;
   
-
-// uintptr_t serialize(Data* ptr);
-// Data* deserialize(uintptr_t raw);
+uintptr_t serialize(Data* ptr);
+Data* deserialize(uintptr_t raw);
 
 #endif
