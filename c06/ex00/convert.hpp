@@ -1,3 +1,5 @@
+#ifndef CONVERT_H
+#define CONVERT_H
 #include  <iostream>
 #include <string>
 // float : 0.0f,-4.2f,4.2f, -inff,+inff, nan
@@ -10,3 +12,4 @@
 
 #define MAX_DOUBLE 1.79769e+308
 #define MIN_DOUBLE 2.22507e-308
+#endif

@@ -86,4 +86,12 @@ catch () {
 }
 /**************************************************************************************/
 
+/**************************************************************************************/
+    SERIALISATION
+la sérialisation est le codage d'une information
+sous la forme d'une suite d'informations plus petites (dites atomiques, voir l'étymologie
+de atome) pour, par exemple, sa sauvegarde (persistance) ou son transport sur le réseau
+(proxy, RPC…). L'activité réciproque, visant à décoder cette suite pour créer une copie
+conforme de l'information d'origine, s'appelle la désérialisation (ou unmarshalling).
 
+/**************************************************************************************/
