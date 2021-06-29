@@ -15,10 +15,10 @@ int main(int argc, char *argv[])
    {
       std::string str = argv[1];
       //handle int
-      char *endptr = NULL;
-      long integer = strtol(argv[1], &endptr, 10);
-      std::cout << integer << " " << "|"<<endptr <<"|" << "\n";
-      if (argv[1] == endptr)
+      char *ptr = NULL;
+      long integer = strtol(argv[1], &ptr, 10);
+      std::cout << integer << " " << "|"<<ptr <<"|" << "\n";
+      if (argv[1] == ptr)
          std::cout << "impossible\n";
       else{
          int a = std::atoi(str.c_str());
