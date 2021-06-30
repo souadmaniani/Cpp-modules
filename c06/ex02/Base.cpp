@@ -14,7 +14,6 @@ Base * Base::generate(void)
         if (i != j)
             delete tab[j];
     }
-    std::cout << "i: " << i << "\n";
     return (tab[i]);
 }
 /******************** dynamic_cast ************************/

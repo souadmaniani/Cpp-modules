@@ -2,15 +2,15 @@
 
 int main()
 {
-    uintptr_t  raw;
-    Data ptr;
-    Data *result;
+    uintptr_t	raw;
+    Data		*ptr = NULL;
+    Data		*result;
     int i = -1;
 
     while (++i < 3)
     {
         std::cout << "*********************\n";
-        raw = serialize(&ptr);
+        raw = serialize(ptr);
         result = deserialize(raw);
         // std::cout << "--------------------\n";
         std::cout << "str: " << result->str << "\n";
