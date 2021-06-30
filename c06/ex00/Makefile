@@ -4,7 +4,7 @@ OBJ		=	*.o
 
 all		:	$(NAME)
 $(NAME) : $(SRC)
-			clang++  -Wall -Wextra -Werror   $(SRC) -o $(NAME)
+			clang++  -Wall -Wextra -Werror -Wconversion -std=c++98 $(SRC) -o $(NAME)
 clean	:
 		rm -f $(NAME)
 fclean	: clean	
