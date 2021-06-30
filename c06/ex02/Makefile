@@ -1,4 +1,4 @@
-NAME	=	convert
+NAME	=	a.out
 SRC		=	*.cpp
 OBJ		=	*.o
 

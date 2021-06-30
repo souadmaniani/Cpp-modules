@@ -88,6 +88,5 @@ int main(int argc, char *argv[])
             std::cout << "double: impossible\n";
       }
       /*************************************************/
-     
    }
 }
