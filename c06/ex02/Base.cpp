@@ -20,6 +20,15 @@ Base * Base::generate(void)
 //  it takes place on the run time not during the compilation
 // works only with polymorphic instance (subtype polymorphisme)
 // class should have a virtual member function
+void identify(Base* p)
+{
+    if (dynamic_cast<A*>(p))
+        std::cout << "A\n";
+    else if (dynamic_cast<B*>(p))
+        std::cout << "B\n";
+    else if (dynamic_cast<C*>(p))
+        std::cout << "C\n";
+}
 
 void identify(Base& p)
 {

@@ -6,10 +6,12 @@ int main()
     Base *test;
     A a = A();
     B b = B();
-    C c = C();
-    identify(c);
-    identify(b);
+    C *c = new C();
     identify(a);
+    identify(b);
+    identify(c);
     test = base.generate();
     identify(*test);
+    identify(test);
+    delete c;
 }

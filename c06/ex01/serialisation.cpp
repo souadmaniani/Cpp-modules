@@ -18,10 +18,6 @@ Data *fill_data(void)
 
 uintptr_t serialize(Data* ptr)
 {
-    ptr = fill_data();
-    // std::cout << "str: " << ptr->str << "\n";
-    // std::cout << "x: " << ptr->x << "\n";
-    // std::cout << "c: " << ptr->c << "\n";
     return  (reinterpret_cast<uintptr_t>(ptr));
 }
 

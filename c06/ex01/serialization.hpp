@@ -2,9 +2,7 @@
 #define SERIALISATION_H
 #include <sstream>
 #include <unistd.h>
-#include <stdint.h>
 #include <ctime>
-#include <cstdlib>
 #include <iostream>
 
 typedef struct Data {
@@ -15,5 +13,6 @@ typedef struct Data {
   
 uintptr_t serialize(Data* ptr);
 Data* deserialize(uintptr_t raw);
+Data *fill_data(void);
 
 #endif
