@@ -47,7 +47,7 @@ void Bureaucrat::increment()
 
 void Bureaucrat::decrement()
 {
-	if (_grade + 1 < 1)
+	if (_grade + 1 > 150)
 		throw (GradeTooLowException());
 	else
 		_grade +=1;
