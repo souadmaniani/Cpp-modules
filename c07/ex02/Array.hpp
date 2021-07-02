@@ -6,14 +6,15 @@ class Array
 {
 private:
 	T *ptr;
-	int n;
+	unsigned int n;
 public:
 	Array();
 	~Array();
 	Array(unsigned int n);
 	Array(Array const & src);
 	Array & operator=(Array const & rhs);
-	int size() const;
+	T & operator[](T idx);
+	unsigned int Array<T>::size(void) const;
 
 };
 
@@ -21,12 +22,17 @@ template <typename T>
 Array<T>::Array()
 {
 	ptr = new T();
+	if (!ptr)
+		std::cout << "memory allocation fails\n";
 }
 
 template <typename T>
 Array<T>::Array(unsigned int n)
 {
-	ptr = new T[n];
+	ptr = new T[n]();
+	if (!ptr)
+		std::cout << "memory allocation fails\n";
+	n = n;
 }
 
 template <typename T>
@@ -38,20 +44,34 @@ Array<T>::Array(Array const & src)
 template <typename T>
 Array<T> & Array<T>::operator=(Array const & rhs)
 {
-	int i = -1;
-	while (++i < n)
-	{
-	   if (ptr[i])
-		delete ptr[i];
-	}
+	unsigned int i = 0;
 	if (ptr)
-		delete ptr;
-	// 
+		delete [] ptr;
+	ptr = new T[n]();
+	if (!ptr)
+		std::cout << "memory allocation fails\n";
+	else
+	{
+		while (i < n)
+		{
+			ptr[i] = rhs.ptr[i];
+			i++;
+		}
+	}
+	n = rhs.n;
 	return *this;
 }
 
 template <typename T>
-int Array<T>::size() const
+T & Array<T>::operator[](T idx)
+{
+	if (idx < 0 || idx >= n)
+		throw std::exception;
+	return ptr[idx];
+}
+
+template <typename T>
+unsigned int Array<T>::size() const
 {
 	return (n);
 }
