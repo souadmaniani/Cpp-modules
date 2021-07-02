@@ -95,3 +95,9 @@ de atome) pour, par exemple, sa sauvegarde (persistance) ou son transport sur le
 conforme de l'information d'origine, s'appelle la désérialisation (ou unmarshalling).
 
 /**************************************************************************************/
+
+simo: 11dh;
+nouha:100dh;
+kawkab:35dh;
+docker:23dh;
+total:169dh
