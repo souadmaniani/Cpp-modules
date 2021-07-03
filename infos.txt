@@ -100,4 +100,5 @@ simo: 11dh;
 nouha:100dh;
 kawkab:35dh;
 docker:23dh;
-total:169dh
+hamza:5dh;
+total:174dh
