@@ -14,7 +14,7 @@ public:
     void addNumber(int num);
     int shortestSpan(void);
     int longestSpan(void);
-    std::vector<int> getVect(void) const;
+    void addNumber(std::vector<int>::iterator start, std::vector<int>::iterator end);
     // void print();
 };
 

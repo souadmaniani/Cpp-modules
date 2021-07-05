@@ -1,16 +1,11 @@
 #include "span.hpp"
-
+#include <algorithm>
 unsigned int Span::_count = 0;
 
 Span::Span(unsigned int n)
 {
     this->N = n;
     Span::_count = 0;
-}
-
-std::vector<int> Span::getVect(void) const
-{
-    return (vect);
 }
 
 void Span::addNumber(int num)
@@ -50,7 +45,22 @@ int Span::longestSpan(void)
 Span::~Span()
 {
 }
+void Span::addNumber(std::vector<int>::iterator start, std::vector<int>::iterator end)
+{
+    std::vector<int>::iterator itr;
 
+    for (itr = start; itr != end; itr++)
+    {
+        if (Span::_count < N)
+        {
+            vect.push_back(*itr);
+            Span::_count +=1;
+        } 
+        else
+           throw ("Reach the limit\n"); 
+    }
+    
+}
 // void Span::print()
 // {
 //     std::vector<int>::iterator itr;
