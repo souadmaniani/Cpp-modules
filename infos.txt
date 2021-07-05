@@ -96,9 +96,4 @@ conforme de l'information d'origine, s'appelle la désérialisation (ou unmarsha
 
 /**************************************************************************************/
 
-simo: 11dh;
-nouha:100dh;
-kawkab:35dh;
-docker:23dh;
 hamza:5dh;
-total:174dh
