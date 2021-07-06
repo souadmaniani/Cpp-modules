@@ -2,6 +2,7 @@
 #define SPAN_H
 #include <vector>
 #include <iostream>
+
 class Span
 {
 private:

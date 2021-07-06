@@ -24,17 +24,13 @@ class MutantStack : public std::stack<T>
 {
 public:
     MutantStack(){}
-    ~MutantStack(){
-        std::cout << "MutantStack Destructor\n";
-    }
+    ~MutantStack(){}
     MutantStack(MutantStack const & src){
-        std::cout << "MutantStack copy\n";
         *this = src;
     }
 
     MutantStack & operator=(MutantStack const & rhs){
-        std::cout << "MutantStack assignation operator\n";
-        
+        this->c = rhs.c;
         return (*this);
     }
     typedef typename std::stack<T>::container_type::iterator iterator;
